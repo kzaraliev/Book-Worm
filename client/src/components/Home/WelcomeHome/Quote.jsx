@@ -18,7 +18,7 @@ export default function Quote() {
 
   return(
     <div className={styles.quoteContainer}>
-        <h2 className={styles.quote}>{quote}</h2>
+        <h2 className={styles.quote}>"{quote}"</h2>
         <p className={styles.author}>{author}</p>
     </div>
   )

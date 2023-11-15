@@ -6,7 +6,8 @@
     "year": 1925,
     "genre": "Classic",
     "description": "Set in the Jazz Age, this classic novel explores themes of wealth, love, and the American Dream through the eyes of Jay Gatsby.",
-    "imageUrl": "https://m.media-amazon.com/images/I/71FTb9X6wsL._AC_UF1000,1000_QL80_.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/71FTb9X6wsL._AC_UF1000,1000_QL80_.jpg",
+    "rating": 4.5
   },
   "02df6084-1ef9-42fd-91df-083243c213a4": {
     "_id": "02df6084-1ef9-42fd-91df-083243c213a4",
@@ -15,7 +16,8 @@
     "year": 1960,
     "genre": "Drama",
     "description": "Harper Lee's masterpiece addresses racial injustice in the American South during the 1930s through the eyes of young Scout Finch.",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
+    "rating": 4.2
   },
   "997a2257-1c72-4194-8543-ff40b2a4c269": {
     "_id": "997a2257-1c72-4194-8543-ff40b2a4c269",
@@ -24,7 +26,8 @@
     "year": 1949,
     "genre": "Dystopian",
     "description": "A dystopian novel that explores the consequences of a totalitarian regime, thought control, and the nature of truth.",
-    "imageUrl": "https://m.media-amazon.com/images/I/71kxa1-0mfL._AC_UF1000,1000_QL80_.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/71kxa1-0mfL._AC_UF1000,1000_QL80_.jpg",
+    "rating": 5
   },
   "657729f7-b03d-456a-9b72-ab16d9cfc689": {
     "_id": "657729f7-b03d-456a-9b72-ab16d9cfc689",
@@ -33,7 +36,8 @@
     "year": 1937,
     "genre": "Fantasy",
     "description": "Journey with Bilbo Baggins as he sets out on an epic quest filled with dwarves, dragons, and magical adventures in Middle-earth.",
-    "imageUrl": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg",
+    "rating": 4.1
   },
   "5499bae8-6149-4893-aa2d-67e3a133eb20": {
     "_id": "5499bae8-6149-4893-aa2d-67e3a133eb20",
@@ -42,6 +46,57 @@
     "year": 2015,
     "genre": "Mystery",
     "description": "A psychological thriller that follows the lives of three women and their connections to a mysterious disappearance.",
-    "imageUrl": "https://m.media-amazon.com/images/I/51n7DYxrLTL.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/51n7DYxrLTL.jpg",
+    "rating": 4.5
+  },
+  "9cdbe2ca-d19b-436b-a4d4-16b956e979bf":{
+    "_id": "9cdbe2ca-d19b-436b-a4d4-16b956e979bf",
+    "name": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "year": 1813,
+    "genre": "Romance",
+    "description": "A classic romance novel that explores societal expectations and the complexities of love in 19th-century England.",
+    "imageUrl": "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg",
+    "rating": 3.1
+  },
+  "f5223eef-c7eb-4430-a3cb-e2ad60ff8f21": {
+    "_id": "f5223eef-c7eb-4430-a3cb-e2ad60ff8f21",
+    "name": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "year": 1951,
+    "genre": "Coming-of-Age",
+    "description": "Follow the journey of Holden Caulfield as he navigates the challenges of adolescence and searches for authenticity in a phony world.",
+    "imageUrl": "https://m.media-amazon.com/images/I/814ZhvhJ-bL._AC_UF1000,1000_QL80_.jpg",
+    "rating": 3.4
+  },
+  "24a9d5e5-dbdd-450a-9ca5-fb52dba5f835": {
+    "_id": "24a9d5e5-dbdd-450a-9ca5-fb52dba5f835",
+    "name": "The Chronicles of Narnia",
+    "author": "C.S. Lewis",
+    "year": 1950,
+    "genre": "Fantasy",
+    "description": "Embark on a magical adventure with the Pevensie siblings in the enchanting land of Narnia, filled with talking animals and mythical creatures.",
+    "imageUrl": "https://m.media-amazon.com/images/I/71uBLNzt4KL._AC_UF1000,1000_QL80_.jpg",
+    "rating": 4
+  },
+  "2ec1d346-7005-4d65-a686-5ad08cd1a76c": {
+    "_id": "2ec1d346-7005-4d65-a686-5ad08cd1a76c",
+    "name": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "year": 1979,
+    "genre": "Science Fiction",
+    "description": "Join Arthur Dent as he navigates space with his alien friend Ford Prefect and encounters eccentric characters in this comedic sci-fi series.",
+    "imageUrl": "https://m.media-amazon.com/images/I/51vfuNNWMTS.jpg",
+    "rating": 3.8
+  },
+  "cd0bc0b3-2f9d-46db-abd4-aec5384d8577": {
+    "_id": "cd0bc0b3-2f9d-46db-abd4-aec5384d8577",
+    "name": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "year": 2003,
+    "genre": "Thriller",
+    "description": "A gripping thriller that follows symbologist Robert Langdon as he unravels ancient mysteries and uncovers hidden secrets.",
+    "imageUrl": "https://m.media-amazon.com/images/I/91Q5dCjc2KL._AC_UF1000,1000_QL80_.jpg",
+    "rating": 4.6
   }
 }
