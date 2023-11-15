@@ -18,8 +18,8 @@ export default function Navigation() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/about">
-              About
+            <Nav.Link as={Link} to="/books">
+              Books
             </Nav.Link>
             <Nav.Link as={Link} to="/contacts">
               Contacts

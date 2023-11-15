@@ -1,0 +1,47 @@
+{
+  "d44def57-5f64-45c5-b004-9ce141ea0448": {
+    "_id": "d44def57-5f64-45c5-b004-9ce141ea0448",
+    "name": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": 1925,
+    "genre": "Classic",
+    "description": "Set in the Jazz Age, this classic novel explores themes of wealth, love, and the American Dream through the eyes of Jay Gatsby.",
+    "imageUrl": "https://m.media-amazon.com/images/I/71FTb9X6wsL._AC_UF1000,1000_QL80_.jpg"
+  },
+  "02df6084-1ef9-42fd-91df-083243c213a4": {
+    "_id": "02df6084-1ef9-42fd-91df-083243c213a4",
+    "name": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "year": 1960,
+    "genre": "Drama",
+    "description": "Harper Lee's masterpiece addresses racial injustice in the American South during the 1930s through the eyes of young Scout Finch.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg"
+  },
+  "997a2257-1c72-4194-8543-ff40b2a4c269": {
+    "_id": "997a2257-1c72-4194-8543-ff40b2a4c269",
+    "name": "1984",
+    "author": "George Orwell",
+    "year": 1949,
+    "genre": "Dystopian",
+    "description": "A dystopian novel that explores the consequences of a totalitarian regime, thought control, and the nature of truth.",
+    "imageUrl": "https://m.media-amazon.com/images/I/71kxa1-0mfL._AC_UF1000,1000_QL80_.jpg"
+  },
+  "657729f7-b03d-456a-9b72-ab16d9cfc689": {
+    "_id": "657729f7-b03d-456a-9b72-ab16d9cfc689",
+    "name": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "year": 1937,
+    "genre": "Fantasy",
+    "description": "Journey with Bilbo Baggins as he sets out on an epic quest filled with dwarves, dragons, and magical adventures in Middle-earth.",
+    "imageUrl": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg"
+  },
+  "5499bae8-6149-4893-aa2d-67e3a133eb20": {
+    "_id": "5499bae8-6149-4893-aa2d-67e3a133eb20",
+    "name": "The Girl on the Train",
+    "author": "Paula Hawkins",
+    "year": 2015,
+    "genre": "Mystery",
+    "description": "A psychological thriller that follows the lives of three women and their connections to a mysterious disappearance.",
+    "imageUrl": "https://m.media-amazon.com/images/I/51n7DYxrLTL.jpg"
+  }
+}
