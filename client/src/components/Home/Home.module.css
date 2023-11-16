@@ -5,3 +5,32 @@
   display: flex;
   flex-direction: column;
 }
+
+.moreBooks {
+  margin-top: 24px;
+  padding: 12px 4px;
+  width: 25%;
+  background-color: #e4d5b794;
+  border: 5px solid #d9b99b;
+  border-radius: 12px;
+  font-size: 3rem;
+  font-family: "Agbalumo", cursive;
+  color: rgba(0, 0, 0, 0.795);
+  transition-duration: 0.4s;
+  margin: 0 auto;
+}
+
+.moreBooks:hover {
+  background-color: #e4d5b7;
+  color: rgb(0, 0, 0);
+}
+
+.textContainer{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.moreBooksIcon{
+  margin-left: 12px;
+  margin-bottom: 12px;
+}

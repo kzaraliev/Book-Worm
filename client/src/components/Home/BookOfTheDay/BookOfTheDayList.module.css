@@ -1,10 +1,10 @@
-.mostPopularBooks{
-    margin-top: 48px;
+.mostPopularBooks {
+  margin-top: 64px;
 }
 
-.title{
-    text-align: center;
-    font-family: 'Agbalumo', cursive;
+.title {
+  text-align: center;
+  font-family: "Agbalumo", cursive;
 }
 
 .containerBooks {
@@ -23,8 +23,28 @@
   width: 24rem;
   height: 24rem;
   object-fit: cover;
-  background: #CCC;
-    -webkit-box-shadow:  0 20px 20px -20px rgba(0,0,0,0.8);
-    -moz-box-shadow:  0 20px 20px -20px rgba(0,0,0,0.8);
-    box-shadow:  0 20px 20px -20px rgba(0,0,0,0.8);
+  background: #ccc;
+  -webkit-box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.8);
+}
+
+.beigeBgColor {
+  background-color: #e4d5b7 !important;
+  border: 2px solid #d9b99b !important;
+}
+
+.beigeBgColorButton{
+  background-color: #e4d5b7 !important;
+  border-top: none !important;
+  border-bottom: 2px solid #d9b99b !important;
+  border-right: 2px solid #d9b99b !important;
+  border-left: 2px solid #d9b99b !important;
+}
+
+.beigeBgColorList {
+  background-color: #e4d5b7 !important;
+  border-bottom: 2px solid #d9b99b !important;
+  border-right: 2px solid #d9b99b !important;
+  border-left: 2px solid #d9b99b !important;
 }

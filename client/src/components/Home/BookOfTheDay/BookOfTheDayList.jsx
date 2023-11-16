@@ -9,15 +9,13 @@ export default function BookOfTheDayList() {
   useEffect(() => {
     bookService.getAll().then((result) => {
       result = result.sort((a, b) => b.rating - a.rating).slice(0, 3);
-      console.log(result);
       setBooks(result);
     });
   }, []);
 
-  console.log(books);
   return (
     <div className={styles.mostPopularBooks}>
-      <h1 className={styles.title} >Most popular books:</h1>
+      <h1 className={styles.title}>Most popular books:</h1>
       <div className={styles.containerBooks}>
         {books.map((book) => (
           <BookOfTheDay key={book._id} {...book} />
