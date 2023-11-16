@@ -44,6 +44,7 @@
 
 .beigeBgColorList {
   background-color: #e4d5b7 !important;
+    border-top: 1px solid #d9b99b !important;
   border-bottom: 2px solid #d9b99b !important;
   border-right: 2px solid #d9b99b !important;
   border-left: 2px solid #d9b99b !important;
