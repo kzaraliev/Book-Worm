@@ -13,7 +13,7 @@ export default function Book({
 }) {
   return (
     <>
-      <Card style={{ width: "22rem"}} >
+      <Card style={{ width: "22rem" }}>
         <Card.Img
           variant="top"
           src={imageUrl}
