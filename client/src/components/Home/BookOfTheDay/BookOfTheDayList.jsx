@@ -18,7 +18,7 @@ export default function BookOfTheDayList() {
       <h1 className={styles.title}>Most popular books:</h1>
       <div className={styles.containerBooks}>
         {books.map((book) => (
-          <BookOfTheDay key={book._id} {...book} />
+          <BookOfTheDay key={book.id} {...book} />
         ))}
       </div>
     </div>

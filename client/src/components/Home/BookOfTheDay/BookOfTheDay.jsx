@@ -1,10 +1,12 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+import { Link } from "react-router-dom";
 import styles from "./BookOfTheDayList.module.css";
 
 export default function BookOfTheDay({
-  name,
+  id,
+  title,
   author,
   year,
   genre,
@@ -21,7 +23,7 @@ export default function BookOfTheDay({
           className={styles.img}
         />
         <Card.Body className={styles.beigeBgColor}>
-          <Card.Title>{name}</Card.Title>
+          <Card.Title>{title}</Card.Title>
           <Card.Text>{description}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
@@ -35,8 +37,13 @@ export default function BookOfTheDay({
             Genre: {genre}
           </ListGroup.Item>
         </ListGroup>
-        <Card.Body className={styles.beigeBgColorButton} style={{borderTop: "none !important"}}>
-          <Button variant="primary">Go somewhere</Button>
+        <Card.Body
+          className={styles.beigeBgColorButton}
+          style={{ borderTop: "none !important" }}
+        >
+          <Button as={Link} to={`/books/${id}`} variant="primary">
+            Go somewhere
+          </Button>
         </Card.Body>
       </Card>
     </div>

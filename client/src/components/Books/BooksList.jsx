@@ -24,12 +24,21 @@ export default function Books() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className={styles.grid}>
-      {currentBooks.map((book) => (
-        <Book key={book._id} {...book} className={styles.item} />
-      ))}
+    <div className={styles.books}>
+      <div className={styles.grid}>
+        {currentBooks.map((book) => (
+          <Book
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            author={book.author}
+            imageUrl={book.imageUrl}
+            className={styles.item}
+          />
+        ))}
 
       {books.length === 0 && <h3 className="no-articles">No books yet</h3>}
+      </div>
       <Pagination
         booksPerPage={booksPerPage}
         totalBooks={books.length}
