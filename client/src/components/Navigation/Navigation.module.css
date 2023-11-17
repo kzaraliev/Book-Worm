@@ -1,7 +1,7 @@
 .navBackgroundColor {
-  position: fixed !important;
+  /* position: fixed !important;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000; */
   background-color: #eed9c4;
   border-bottom: 1px solid black;
 }

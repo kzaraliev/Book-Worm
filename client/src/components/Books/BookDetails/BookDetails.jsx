@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import styles from "./BookDetails.module.css";
-import * as bookService from "../../services/bookService";
+import * as bookService from "../../../services/bookService";
 
 export default function BooksDetails({}) {
   const { id } = useParams();
@@ -17,6 +17,8 @@ export default function BooksDetails({}) {
         navigate("/books");
       });
   }, [id]);
+
+  console.log(book);
 
   return (
     <>
