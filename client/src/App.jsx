@@ -9,17 +9,19 @@ import Books from "./components/Books/BooksList.jsx";
 import BookDetails from "./components/Books/BookDetails/BookDetails.jsx";
 import About from "./components/About/About.jsx";
 import Login from "./components/Login/Login.jsx";
+import Register from "./components/Register/Register.jsx";
 
 function App() {
   return (
-    <div style={{ backgroundColor: "#faf0e6"}}>
+    <div style={{ backgroundColor: "#faf0e6" }}>
       <Navigation />
       <Routes>
         <Route path={Path.Home} element={<Home />} />
         <Route path={Path.Books} element={<Books />} />
         <Route path={`${Path.Books}/:id`} element={<BookDetails />} />
         <Route path={Path.About} element={<About />} />
-        <Route path={Path.Login} element={<Login/>} />
+        <Route path={Path.Login} element={<Login />} />
+        <Route path={Path.Register} element={<Register />} />
         {/* <Route path="*" element={<NotFount />} /> */}
       </Routes>
       <Footer />

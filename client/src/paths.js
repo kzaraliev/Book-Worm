@@ -3,6 +3,7 @@ const Path = {
   Books: "/books",
   About: "/about",
   Login: "/login",
+  Register: "/register",
 };
 
 export default Path;
