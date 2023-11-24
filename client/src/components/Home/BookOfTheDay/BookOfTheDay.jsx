@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import styles from "./BookOfTheDayList.module.css";
 
 export default function BookOfTheDay({
-  id,
+  _id,
   title,
   author,
   year,
@@ -41,7 +41,7 @@ export default function BookOfTheDay({
           className={styles.beigeBgColorButton}
           style={{ borderTop: "none !important" }}
         >
-          <Button as={Link} to={`/books/${id}`} variant="primary">
+          <Button as={Link} to={`/books/${_id}`} variant="primary">
             Go somewhere
           </Button>
         </Card.Body>

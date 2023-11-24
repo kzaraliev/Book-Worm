@@ -1339,6 +1339,127 @@
     	}
     };
     var seedData = {
+        books: {
+            
+                "d44def57-5f64-45c5-b004-9ce141ea0448": {
+                  "title": "The Great Gatsby",
+                  "author": "F. Scott Fitzgerald",
+                  "year": 1925,
+                  "genre": "Classic",
+                  "description": "Set in the Jazz Age, this classic novel explores themes of wealth, love, and the American Dream through the eyes of Jay Gatsby.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/71FTb9X6wsL._AC_UF1000,1000_QL80_.jpg",
+                  "rating": 4.5
+                },
+                "02df6084-1ef9-42fd-91df-083243c213a4": {
+                  "title": "To Kill a Mockingbird",
+                  "author": "Harper Lee",
+                  "year": 1960,
+                  "genre": "Drama",
+                  "description": "Harper Lee's masterpiece addresses racial injustice in the American South during the 1930s through the eyes of young Scout Finch.",
+                  "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
+                  "rating": 4.2
+                },
+                "997a2257-1c72-4194-8543-ff40b2a4c269": {
+                  "title": "1984",
+                  "author": "George Orwell",
+                  "year": 1949,
+                  "genre": "Dystopian",
+                  "description": "A dystopian novel that explores the consequences of a totalitarian regime, thought control, and the nature of truth.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/71kxa1-0mfL._AC_UF1000,1000_QL80_.jpg",
+                  "rating": 5
+                },
+                "657729f7-b03d-456a-9b72-ab16d9cfc689": {
+                  "title": "The Hobbit",
+                  "author": "J.R.R. Tolkien",
+                  "year": 1937,
+                  "genre": "Fantasy",
+                  "description": "Journey with Bilbo Baggins as he sets out on an epic quest filled with dwarves, dragons, and magical adventures in Middle-earth.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg",
+                  "rating": 4.1
+                },
+                "5499bae8-6149-4893-aa2d-67e3a133eb20": {
+                  "title": "The Girl on the Train",
+                  "author": "Paula Hawkins",
+                  "year": 2015,
+                  "genre": "Mystery",
+                  "description": "A psychological thriller that follows the lives of three women and their connections to a mysterious disappearance.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/51n7DYxrLTL.jpg",
+                  "rating": 4.5
+                },
+                "9cdbe2ca-d19b-436b-a4d4-16b956e979bf": {
+                  "title": "Pride and Prejudice",
+                  "author": "Jane Austen",
+                  "year": 1813,
+                  "genre": "Romance",
+                  "description": "A classic romance novel that explores societal expectations and the complexities of love in 19th-century England.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg",
+                  "rating": 3.1
+                },
+                "f5223eef-c7eb-4430-a3cb-e2ad60ff8f21": {
+                  "title": "The Catcher in the Rye",
+                  "author": "J.D. Salinger",
+                  "year": 1951,
+                  "genre": "Coming-of-Age",
+                  "description": "Follow the journey of Holden Caulfield as he navigates the challenges of adolescence and searches for authenticity in a phony world.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/814ZhvhJ-bL._AC_UF1000,1000_QL80_.jpg",
+                  "rating": 3.4
+                },
+                "24a9d5e5-dbdd-450a-9ca5-fb52dba5f835": {
+                  "title": "The Chronicles of Narnia",
+                  "author": "C.S. Lewis",
+                  "year": 1950,
+                  "genre": "Fantasy",
+                  "description": "Embark on a magical adventure with the Pevensie siblings in the enchanting land of Narnia, filled with talking animals and mythical creatures.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/71uBLNzt4KL._AC_UF1000,1000_QL80_.jpg",
+                  "rating": 4
+                },
+                "2ec1d346-7005-4d65-a686-5ad08cd1a76c": {
+                  "title": "The Hitchhiker's Guide to the Galaxy",
+                  "author": "Douglas Adams",
+                  "year": 1979,
+                  "genre": "Science Fiction",
+                  "description": "Join Arthur Dent as he navigates space with his alien friend Ford Prefect and encounters eccentric characters in this comedic sci-fi series.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/51vfuNNWMTS.jpg",
+                  "rating": 3.8
+                },
+                "cd0bc0b3-2f9d-46db-abd4-aec5384d8577": {
+                  "title": "The Da Vinci Code",
+                  "author": "Dan Brown",
+                  "year": 2003,
+                  "genre": "Thriller",
+                  "description": "A gripping thriller that follows symbologist Robert Langdon as he unravels ancient mysteries and uncovers hidden secrets.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/91Q5dCjc2KL._AC_UF1000,1000_QL80_.jpg",
+                  "rating": 4.6
+                },
+                "40225098-3ec0-436c-8cf2-25dcbb6ea92f": {
+                  "title": "The Hunger Games",
+                  "author": "Suzanne Collins",
+                  "year": 2008,
+                  "genre": "Dystopian",
+                  "description": "In a dystopian future, Katniss Everdeen must participate in the Hunger Games, a televised fight to the death among teenagers, to secure her family's survival.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/614SwlZNtJL._AC_UF1000,1000_QL80_.jpg",
+                  "rating": 4.3
+                },
+                "60e1ef58-9c4d-4c46-91ee-669ebebfb52d": {
+                  "title": "Brave New World",
+                  "author": "Aldous Huxley",
+                  "year": 1932,
+                  "genre": "Fiction",
+                  "description": "Set in a futuristic world where people are engineered for specific roles, this novel explores the consequences of a society that values pleasure and conformity.",
+                  "imageUrl": "https://m.media-amazon.com/images/I/81zE42gT3xL._AC_UF1000,1000_QL80_.jpg",
+                  "rating": 4.5
+                },
+                "f0e4c6db-ad97-43ce-940f-5f0f671505fa": {
+                  "title": "The Fault in Our Stars",
+                  "author": "John Green",
+                  "year": 2012,
+                  "genre": "Romance",
+                  "description": "Hazel Grace Lancaster, a cancer patient, navigates the challenges of love and loss with Augustus Waters in this heartwarming and poignant tale.",
+                  "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660273739i/11870085.jpg",
+                  "rating": 3.2
+                }
+              
+        },
     	recipes: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

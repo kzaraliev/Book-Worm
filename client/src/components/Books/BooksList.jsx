@@ -31,8 +31,8 @@ export default function Books() {
       <div className={styles.grid}>
         {currentBooks.map((book) => (
           <Book
-            key={book.id}
-            id={book.id}
+            key={book._id}
+            id={book._id}
             title={book.title}
             author={book.author}
             imageUrl={book.imageUrl}
