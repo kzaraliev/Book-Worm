@@ -5,3 +5,7 @@
   background-color: #eed9c4;
   border-bottom: 1px solid black;
 }
+
+.userButtons{
+  align-items: end;
+}

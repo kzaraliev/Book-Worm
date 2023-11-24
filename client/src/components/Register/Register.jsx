@@ -10,7 +10,7 @@ import useForm from "../../hooks/useForm";
 const RegisterFormKeys = {
   Email: "email",
   Password: "password",
-  Picture: "picture",
+  ImgURL: "img",
   Username: "username",
 };
 
@@ -20,7 +20,7 @@ export default function Register() {
     [RegisterFormKeys.Email]: "",
     [RegisterFormKeys.Password]: "",
     [RegisterFormKeys.Username]: "",
-    [RegisterFormKeys.Picture]: "",
+    [RegisterFormKeys.ImgURL]: "",
   });
 
   return (
@@ -41,18 +41,6 @@ export default function Register() {
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label htmlFor="picture">Profile picture URL</Form.Label>
-          <Form.Control
-            type="text"
-            id="picture"
-            name="picture"
-            placeholder="Enter picture URL"
-            onChange={onChange}
-            values={values[RegisterFormKeys.Picture]}
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3">
           <Form.Label htmlFor="email">Email address</Form.Label>
           <Form.Control
             type="email"
@@ -61,6 +49,18 @@ export default function Register() {
             placeholder="Enter email"
             onChange={onChange}
             values={values[RegisterFormKeys.Email]}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor="imgURL">Profile picture URL</Form.Label>
+          <Form.Control
+            type="text"
+            id="imgURL"
+            name="imgURL"
+            placeholder="Enter picture URL"
+            onChange={onChange}
+            values={values[RegisterFormKeys.ImgURL]}
           />
         </Form.Group>
 

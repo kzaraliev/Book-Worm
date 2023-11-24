@@ -11,6 +11,8 @@ import BookDetails from "./components/Books/BookDetails/BookDetails.jsx";
 import About from "./components/About/About.jsx";
 import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
+import CreateBook from "./components/CreateBook/CreateBook.jsx";
+import Profile from "./components/Profile/Profile.jsx";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path={Path.About} element={<About />} />
           <Route path={Path.Login} element={<Login />} />
           <Route path={Path.Register} element={<Register />} />
+          <Route path={Path.CreateBook} element={<CreateBook/>}/>
+          <Route path={Path.Profile} element={<Profile/>}/>
           {/* <Route path="*" element={<NotFount />} /> */}
         </Routes>
         <Footer />
