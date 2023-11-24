@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 
 import styles from "./Register.module.css";
 import Path from "../../paths";
+import AuthContext from "../../context/authContext";
+import useForm from "../../hooks/useForm";
 
 const RegisterFormKeys = {
   Email: "email",
@@ -12,9 +15,17 @@ const RegisterFormKeys = {
 };
 
 export default function Register() {
+  const { registerSubmitHandler } = useContext(AuthContext);
+  const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+    [RegisterFormKeys.Email]: "",
+    [RegisterFormKeys.Password]: "",
+    [RegisterFormKeys.Username]: "",
+    [RegisterFormKeys.Picture]: "",
+  });
+
   return (
     <div className={styles.registerContainer}>
-      <Form className={styles.form}>
+      <Form className={styles.form} onSubmit={onSubmit}>
         <h1 className={styles.title}>Register</h1>
 
         <Form.Group className="mb-3">
@@ -24,6 +35,8 @@ export default function Register() {
             id="username"
             name="username"
             placeholder="Enter username"
+            onChange={onChange}
+            values={values[RegisterFormKeys.Username]}
           />
         </Form.Group>
 
@@ -34,6 +47,8 @@ export default function Register() {
             id="picture"
             name="picture"
             placeholder="Enter picture URL"
+            onChange={onChange}
+            values={values[RegisterFormKeys.Picture]}
           />
         </Form.Group>
 
@@ -44,6 +59,8 @@ export default function Register() {
             id="email"
             name="email"
             placeholder="Enter email"
+            onChange={onChange}
+            values={values[RegisterFormKeys.Email]}
           />
         </Form.Group>
 
@@ -54,9 +71,13 @@ export default function Register() {
             id="password"
             name="password"
             placeholder="Enter password"
+            onChange={onChange}
+            values={values[RegisterFormKeys.Password]}
           />
         </Form.Group>
-        <Link to={Path.Login} className={styles.ref}>*Already have an account?</Link>
+        <Link to={Path.Login} className={styles.ref}>
+          *Already have an account?
+        </Link>
         <button className={styles.submitButton} variant="primary" type="submit">
           Login
         </button>

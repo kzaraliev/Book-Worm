@@ -11,9 +11,12 @@ export default function Books() {
   const [booksPerPage] = useState(6);
 
   useEffect(() => {
-    bookService.getAll().then((result) => {
-      setBooks(result);
-    });
+    bookService
+      .getAll()
+      .then((result) => {
+        setBooks(result);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   //Get books for current page
@@ -37,7 +40,7 @@ export default function Books() {
           />
         ))}
 
-      {books.length === 0 && <h3 className="no-articles">No books yet</h3>}
+        {books.length === 0 && <h3 className="no-articles">No books yet</h3>}
       </div>
       <Pagination
         booksPerPage={booksPerPage}
