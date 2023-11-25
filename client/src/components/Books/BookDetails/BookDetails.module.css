@@ -1,1 +1,5 @@
-/* TODO: add styles */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
