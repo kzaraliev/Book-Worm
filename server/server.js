@@ -1467,7 +1467,21 @@
     			bookId: "997a2257-1c72-4194-8543-ff40b2a4c269",
     			_createdOn: 1614260681375,
     			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		}
+    		},
+            "669d949a-e456-4e22-bbf3-63c533bed892": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			content: "The best book ever :)!",
+    			bookId: "997a2257-1c72-4194-8543-ff40b2a4c269",
+    			_createdOn: 1614260681375,
+    			_id: "669d949a-e456-4e22-bbf3-63c533bed892"
+    		},
+            "3223942d-4f9a-431a-b676-d25aecbd84a1": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin gravida ex, ut blandit ante bibendum vel. Vivamus ornare mi a neque finibus, ac feugiat justo rhoncus. Phasellus cursus magna at est tincidunt, at imperdiet nibh sodales. Maecenas ultrices libero sed viverra congue. Mauris vitae sem aliquam, dictum libero nec, tristique ipsum.",
+    			bookId: "997a2257-1c72-4194-8543-ff40b2a4c269",
+    			_createdOn: 1614260681375,
+    			_id: "3223942d-4f9a-431a-b676-d25aecbd84a1"
+    		},
     	},
     	likes: {
     	},

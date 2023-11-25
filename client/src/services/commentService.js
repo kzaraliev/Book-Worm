@@ -13,10 +13,10 @@ export const getAll = async (bookId) => {
   return result;
 };
 
-export const create = async (bookId, text) => {
+export const create = async (bookId, content) => {
   const newComment = await request.post(baseUrl, {
     bookId,
-    text,
+    content,
   });
 
   return newComment;
