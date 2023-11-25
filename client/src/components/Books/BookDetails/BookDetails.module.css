@@ -1,5 +1,67 @@
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 91.4vh;
+}
+
+.content {
+  padding: 32px 28px;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookDetails {
+  padding: 3px 12px;
+  width: 65%;
+}
+
+.bookImg {
+  background-color: #e4d5b748;
+  border: 5px dashed #d9b99b;
+  border-radius: 12px;
+}
+
+.bookTitle {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.bookAuthor {
+  border-bottom: 1px solid black;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.bookInfo {
+  font-size: larger;
+  border-bottom: 1px solid black;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.addToFav {
+  font-size: xx-large;
+}
+
+.likeButton {
+  border: none;
+  background-color: inherit;
+  margin-left: 12px;
+  font-size: 32px;
+  transition-duration: 0.3s;
+}
+
+.likeButton:hover {
+  color: red;
+}
+
+.commentBox {
+  background-color: #e4d5b748;
+  border: 2px solid #d9b99b;
+  border-radius: 12px;
+  height: 31.5%;
+  overflow: hidden;
 }

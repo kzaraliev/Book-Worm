@@ -32,26 +32,39 @@ export default function BooksDetails({}) {
     });
   }, [id]);
 
-  console.log(comments);
-
   return (
     <div className={styles.container}>
-      <Figure.Image
-        width={300}
-        height={180}
-        alt="171x180"
-        src={book.imageUrl}
-      />
-
-      <div className={styles.bookDetails}>
-        <h1>{book.title}</h1>
-        <h2>{book.author}</h2>
-        <p>Published on: {book.year}</p>
-        <p>Genre: {book.genre}</p>
-        <p>Description: {book.description}</p>
-        <div>
-          <FaHeart />
-          <ul></ul>
+      <div className={styles.content}>
+        <Figure.Image
+          width={400}
+          height={280}
+          alt="171x180"
+          src={book.imageUrl}
+          className={styles.bookImg}
+        />
+        <div className={styles.bookDetails}>
+          <h1 className={styles.bookTitle}>{book.title}</h1>
+          <h2 className={styles.bookAuthor}>{book.author}</h2>
+          <div className={styles.bookInfo}>
+            <p><b>Published on</b>: {book.year}</p>
+            <p><b>Genre</b>: {book.genre}</p>
+            <p><b>Description</b>: {book.description}</p>
+          </div>
+          <p className={styles.addToFav}>
+            Add to favorite:
+            <button className={styles.likeButton}>
+              <FaHeart />
+            </button>
+          </p>
+          <ul className={styles.commentBox}>
+            {comments.map(({ _id, content, owner: { username } }) => (
+              <li key={_id} className="comment">
+                <p>
+                  {username}: {content}
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
