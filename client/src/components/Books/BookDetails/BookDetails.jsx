@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "./BookDetails.module.css";
 import * as bookService from "../../../services/bookService";
 import * as commentService from "../../../services/commentService";
+import * as likeService from "../../../services/likeService";
 import useForm from "../../../hooks/useForm";
 import formDate from "../../../utils/dataUtils";
 import reducer from "./commentReducer";
@@ -11,13 +12,15 @@ import AuthContext from "../../../context/authContext";
 
 import Figure from "react-bootstrap/Figure";
 import Form from "react-bootstrap/Form";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 export default function BooksDetails({}) {
-  const { email, userId } = useContext(AuthContext);
+  const { email, userId, isAuthenticated } = useContext(AuthContext);
   const { id } = useParams();
   const [book, setBook] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
+  // const [isLiked, setIsLiked] = useState(false);
+  // const [likeId, setLikeId] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,10 +36,24 @@ export default function BooksDetails({}) {
         payload: result,
       });
     });
+    // likeService.getAll(id).then((result) => {
+    //   result.map((like) => {
+    //     if (like._ownerId === userId) {
+    //       setIsLiked(true);
+    //       setLikeId(like._id);
+    //     }
+    //   });
+    // });
   }, [id]);
 
+
   const addCommentHandler = async (values) => {
-    const newComment = await commentService.create(id, values.comment);
+    if (values.comment === "") {
+      return;
+    }
+    const newComment = await commentService
+      .create(id, values.comment)
+      .catch((err) => console.log(err));
 
     newComment.owner = { email };
 
@@ -45,6 +62,15 @@ export default function BooksDetails({}) {
       payload: newComment,
     });
   };
+
+  // const likeBookHandler = async () => {
+  //   if (isLiked) {
+  //     await likeService.unlike(likeId);
+  //     setIsLiked(false);
+  //   }
+  //   await likeService.like(id, userId);
+  //   setIsLiked(true);
+  // };
 
   const initialValues = useMemo(
     () => ({
@@ -81,23 +107,27 @@ export default function BooksDetails({}) {
               <b>Description</b>: {book.description}
             </p>
           </div>
-          <p className={styles.addToFav}>
+          {/* <p className={styles.addToFav}>
             Add to favorite:
             <button className={styles.likeButton}>
-              <FaHeart />
+              {isLiked ? (
+                <FaHeart onClick={likeBookHandler} />
+              ) : (
+                <FaRegHeart onClick={likeBookHandler} />
+              )}
             </button>
-          </p>
+          </p> */}
           <div className={styles.commentSection}>
             <ul className={styles.commentBox}>
               {comments.length === 0 ? (
                 <h1 className={styles.noComments}>No comments yet</h1>
               ) : (
                 comments.map(
-                  ({ _id, content, owner: { username }, _createdOn }) => (
+                  ({ _id, content, owner: { email }, _createdOn }) => (
                     <li key={_id} className={styles.comment}>
                       <p className={styles.commentText}>{content}</p>
                       <p className={styles.commentData}>
-                        {username} {formDate(_createdOn)}
+                        {email} {formDate(_createdOn)}
                       </p>
                     </li>
                   )
@@ -108,11 +138,20 @@ export default function BooksDetails({}) {
               <Form.Control
                 className={styles.inputComment}
                 name="comment"
-                placeholder="Comment here"
+                placeholder={
+                  isAuthenticated
+                    ? "Comment here"
+                    : "You need to be logged in to post comments"
+                }
                 onChange={onChange}
                 value={values.comment}
+                readOnly={!isAuthenticated}
               />
-              <button type="submit" value="Add Comment">
+              <button
+                className={styles.submitButton}
+                type="submit"
+                value="Add Comment"
+              >
                 Send
               </button>
             </form>
