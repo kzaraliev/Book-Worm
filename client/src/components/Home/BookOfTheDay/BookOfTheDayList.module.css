@@ -49,3 +49,9 @@
   border-right: 2px solid #d9b99b !important;
   border-left: 2px solid #d9b99b !important;
 }
+
+.cutText { 
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  white-space: nowrap;
+}

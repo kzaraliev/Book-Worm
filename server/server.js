@@ -1505,8 +1505,6 @@
     			_id: "3223942d-4f9a-431a-b676-d25aecbd84a1"
     		},
     	},
-    	likes: {
-    	},
     };
     var rules$1 = {
     	users: {

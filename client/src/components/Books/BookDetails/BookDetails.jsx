@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "./BookDetails.module.css";
 import * as bookService from "../../../services/bookService";
 import * as commentService from "../../../services/commentService";
+import Path from "../../../paths";
 import useForm from "../../../hooks/useForm";
 import formDate from "../../../utils/dataUtils";
 import reducer from "./commentReducer";
@@ -13,7 +14,7 @@ import Figure from "react-bootstrap/Figure";
 import Form from "react-bootstrap/Form";
 
 export default function BooksDetails({}) {
-  const { email, userId, isAuthenticated } = useContext(AuthContext);
+  const { email, userId, isAuthenticated, username } = useContext(AuthContext);
   const { id } = useParams();
   const [book, setBook] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
@@ -24,7 +25,7 @@ export default function BooksDetails({}) {
       .getOne(id)
       .then(setBook)
       .catch((err) => {
-        navigate("/books");
+        navigate(Path.Books);
       });
     commentService.getAll(id).then((result) => {
       dispatch({
@@ -42,13 +43,15 @@ export default function BooksDetails({}) {
       .create(id, values.comment)
       .catch((err) => console.log(err));
 
-    newComment.owner = { email };
+    newComment.owner = { username };
 
     dispatch({
       type: "ADD_COMMENT",
       payload: newComment,
     });
   };
+
+  console.log(comments);
 
   const initialValues = useMemo(
     () => ({
@@ -85,27 +88,17 @@ export default function BooksDetails({}) {
               <b>Description</b>: {book.description}
             </p>
           </div>
-          {/* <p className={styles.addToFav}>
-            Add to favorite:
-            <button className={styles.likeButton}>
-              {isLiked ? (
-                <FaHeart onClick={likeBookHandler} />
-              ) : (
-                <FaRegHeart onClick={likeBookHandler} />
-              )}
-            </button>
-          </p> */}
           <div className={styles.commentSection}>
             <ul className={styles.commentBox}>
               {comments.length === 0 ? (
                 <h1 className={styles.noComments}>No comments yet</h1>
               ) : (
                 comments.map(
-                  ({ _id, content, owner: { email }, _createdOn }) => (
+                  ({ _id, content, owner: { username }, _createdOn }) => (
                     <li key={_id} className={styles.comment}>
                       <p className={styles.commentText}>{content}</p>
                       <p className={styles.commentData}>
-                        {email} {formDate(_createdOn)}
+                        {username} {formDate(_createdOn)}
                       </p>
                     </li>
                   )

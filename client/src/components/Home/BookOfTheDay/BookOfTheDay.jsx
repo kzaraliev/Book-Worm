@@ -24,7 +24,7 @@ export default function BookOfTheDay({
         />
         <Card.Body className={styles.beigeBgColor}>
           <Card.Title>{title}</Card.Title>
-          <Card.Text>{description}</Card.Text>
+          <Card.Text className={styles.cutText}>{description}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroup.Item className={styles.beigeBgColorList}>
