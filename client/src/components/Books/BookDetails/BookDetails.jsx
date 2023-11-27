@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "./BookDetails.module.css";
 import * as bookService from "../../../services/bookService";
 import * as commentService from "../../../services/commentService";
-import * as likeService from "../../../services/likeService";
 import useForm from "../../../hooks/useForm";
 import formDate from "../../../utils/dataUtils";
 import reducer from "./commentReducer";
@@ -12,15 +11,12 @@ import AuthContext from "../../../context/authContext";
 
 import Figure from "react-bootstrap/Figure";
 import Form from "react-bootstrap/Form";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 export default function BooksDetails({}) {
   const { email, userId, isAuthenticated } = useContext(AuthContext);
   const { id } = useParams();
   const [book, setBook] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
-  // const [isLiked, setIsLiked] = useState(false);
-  // const [likeId, setLikeId] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -36,16 +32,7 @@ export default function BooksDetails({}) {
         payload: result,
       });
     });
-    // likeService.getAll(id).then((result) => {
-    //   result.map((like) => {
-    //     if (like._ownerId === userId) {
-    //       setIsLiked(true);
-    //       setLikeId(like._id);
-    //     }
-    //   });
-    // });
   }, [id]);
-
 
   const addCommentHandler = async (values) => {
     if (values.comment === "") {
@@ -62,15 +49,6 @@ export default function BooksDetails({}) {
       payload: newComment,
     });
   };
-
-  // const likeBookHandler = async () => {
-  //   if (isLiked) {
-  //     await likeService.unlike(likeId);
-  //     setIsLiked(false);
-  //   }
-  //   await likeService.like(id, userId);
-  //   setIsLiked(true);
-  // };
 
   const initialValues = useMemo(
     () => ({
