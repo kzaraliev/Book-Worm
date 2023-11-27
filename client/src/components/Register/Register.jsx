@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 
-import styles from "./Register.module.css";
+import styles from "../../styles/FormStyles.module.css";
 import Path from "../../paths";
 import AuthContext from "../../context/authContext";
 import useForm from "../../hooks/useForm";
@@ -24,7 +24,7 @@ export default function Register() {
   });
 
   return (
-    <div className={styles.registerContainer}>
+    <div className={styles.containerForm}>
       <Form className={styles.form} onSubmit={onSubmit}>
         <h1 className={styles.title}>Register</h1>
 
@@ -53,12 +53,12 @@ export default function Register() {
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label htmlFor="imgURL">Profile picture URL</Form.Label>
+          <Form.Label htmlFor="imgURL">Profile image URL</Form.Label>
           <Form.Control
             type="text"
             id="imgURL"
             name="imgURL"
-            placeholder="Enter picture URL"
+            placeholder="Enter image URL"
             onChange={onChange}
             values={values[RegisterFormKeys.ImgURL]}
           />

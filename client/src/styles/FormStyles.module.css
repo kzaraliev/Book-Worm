@@ -1,4 +1,4 @@
-.registerContainer {
+.containerForm {
   height: 91.4vh;
   display: flex;
   flex-direction: column;
@@ -38,9 +38,22 @@
   color: rgb(0, 0, 0);
 }
 
+/* Create book */
+
+.textArea {
+  resize: none;
+}
+
+/* ----------- */
+
+
+/* Login and Register */
+
 .ref {
   width: fit-content;
   display: block;
   float: right;
   color: black;
 }
+ 
+/* ------------------ */

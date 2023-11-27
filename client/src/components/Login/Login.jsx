@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 
-import styles from "./Login.module.css";
+import styles from "../../styles/FormStyles.module.css";
 import Path from "../../paths";
 import AuthContext from "../../context/authContext";
 import useForm from "../../hooks/useForm";
@@ -20,7 +20,7 @@ export default function Login() {
   });
 
   return (
-    <div className={styles.loginContainer}>
+    <div className={styles.containerForm}>
       <Form className={styles.form} onSubmit={onSubmit}>
         <h1 className={styles.title}>Login</h1>
         <Form.Group className="mb-3">
