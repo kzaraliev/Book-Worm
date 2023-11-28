@@ -51,8 +51,6 @@ export default function BooksDetails({}) {
     });
   };
 
-  console.log(comments);
-
   const initialValues = useMemo(
     () => ({
       comment: "",

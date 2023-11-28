@@ -1340,7 +1340,7 @@
             "5597a429-f87f-48d4-83b0-268f45ef5a68": {
     			email: "elena@gmail.com",
     			username: "Elena",
-                imgURL: "https://wallpapers.com/images/hd/profile-picture-f67r1m9y562wdtin.jpg",
+                imgURL: "https://storage.prompt-hunt.workers.dev/clfml7ihd0005js08wakvfzcm_1",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		}
     	},

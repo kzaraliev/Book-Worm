@@ -60,18 +60,14 @@
 .button {
   padding: 12px;
   width: 30%;
-  background-color: #e4d5b794;
-  border-radius: 12px;
   color: rgba(0, 0, 0, 0.795);
-  transition-duration: 0.4s;
-  margin: 24px 0 auto;
   font-weight: 600;
   font-size: large;
   text-decoration: none;
 }
 
 .button:hover {
-  text-decoration: underline ;
+  text-decoration: underline;
   color: rgb(0, 0, 0);
 }
 
