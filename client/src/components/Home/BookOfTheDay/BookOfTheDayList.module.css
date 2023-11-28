@@ -40,11 +40,12 @@
   border-bottom: 2px solid #d9b99b !important;
   border-right: 2px solid #d9b99b !important;
   border-left: 2px solid #d9b99b !important;
+  padding-left: 6px !important;
 }
 
 .beigeBgColorList {
   background-color: #e4d5b7 !important;
-    border-top: 1px solid #d9b99b !important;
+  border-top: 1px solid #d9b99b !important;
   border-bottom: 2px solid #d9b99b !important;
   border-right: 2px solid #d9b99b !important;
   border-left: 2px solid #d9b99b !important;
@@ -54,4 +55,27 @@
   text-overflow: ellipsis;
   overflow: hidden; 
   white-space: nowrap;
+}
+
+.button {
+  padding: 12px;
+  width: 30%;
+  background-color: #e4d5b794;
+  border-radius: 12px;
+  color: rgba(0, 0, 0, 0.795);
+  transition-duration: 0.4s;
+  margin: 24px 0 auto;
+  font-weight: 600;
+  font-size: large;
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: underline ;
+  color: rgb(0, 0, 0);
+}
+
+.icon{
+  margin-bottom: 2.2px;
+  margin-left: 6px;
 }

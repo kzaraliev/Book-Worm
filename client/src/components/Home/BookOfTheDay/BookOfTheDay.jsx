@@ -1,4 +1,4 @@
-import Button from "react-bootstrap/Button";
+import { FaBookOpen } from "react-icons/fa";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Link } from "react-router-dom";
@@ -41,9 +41,10 @@ export default function BookOfTheDay({
           className={styles.beigeBgColorButton}
           style={{ borderTop: "none !important" }}
         >
-          <Button as={Link} to={`/books/${_id}`} variant="primary">
-            Go somewhere
-          </Button>
+          <Link className={styles.button} to={`/books/${_id}`}>
+            See more
+            <FaBookOpen className={styles.icon} />
+          </Link>
         </Card.Body>
       </Card>
     </div>
