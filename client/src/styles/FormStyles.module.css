@@ -38,6 +38,14 @@
   color: rgb(0, 0, 0);
 }
 
+.invalid {
+  animation: alternate;
+  transition-duration: 0.4s;
+  font-size: large;
+  color: red;
+  margin-bottom: 6px;
+}
+
 /* Create book */
 
 .textArea {
@@ -46,8 +54,24 @@
 
 /* ----------- */
 
-
 /* Login and Register */
+
+.inputContainer {
+  position: relative;
+}
+
+.showPassword {
+  /* cursor: pointer;
+  width: fit-content;*/
+  font-size: large;
+  position: absolute;
+  right: 10px;
+  top: 68%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
 
 .ref {
   width: fit-content;
@@ -55,5 +79,5 @@
   float: right;
   color: black;
 }
- 
+
 /* ------------------ */
