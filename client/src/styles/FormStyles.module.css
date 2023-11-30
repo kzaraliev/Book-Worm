@@ -52,6 +52,11 @@
   resize: none;
 }
 
+.yearAndGenre{
+  display: flex;
+  justify-content: space-between;
+}
+
 /* ----------- */
 
 /* Login and Register */

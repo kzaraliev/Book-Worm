@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { useFormik } from "formik";
@@ -8,7 +8,7 @@ import Path from "../../paths";
 import { createBookValidation } from "./createBookValidation";
 import * as bookService from "../../services/bookService";
 import styles from "../../styles/FormStyles.module.css";
-import AuthContext from '../../context/authContext';
+import AuthContext from "../../context/authContext";
 
 const initialValues = {
   [CreateFormKeys.Title]: "",
@@ -55,9 +55,10 @@ export default function CreateBook() {
     }
   }
 
+  //TODO Add styles for overflowing form (Create book)
   return (
     <div className={styles.containerForm}>
-      <Form onSubmit={handleSubmit} className={styles.form} >
+      <Form onSubmit={handleSubmit} className={styles.form}>
         <h1 className={styles.title}>Create Book</h1>
 
         <Form.Group className="mb-3">
@@ -92,37 +93,39 @@ export default function CreateBook() {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
-          {errors[CreateFormKeys.Year] && touched[CreateFormKeys.Year] && (
-            <p className={styles.invalid}>{errors[CreateFormKeys.Year]}</p>
-          )}
-          <Form.Label htmlFor={CreateFormKeys.Year}>Published on</Form.Label>
-          <Form.Control
-            type="number"
-            id={CreateFormKeys.Year}
-            name={CreateFormKeys.Year}
-            placeholder="Enter year of publication"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values[CreateFormKeys.Year]}
-          />
-        </Form.Group>
+        <div className={styles.yearAndGenre}>
+          <Form.Group className="mb-3" style={{ width: "45%" }}>
+            {errors[CreateFormKeys.Year] && touched[CreateFormKeys.Year] && (
+              <p className={styles.invalid}>{errors[CreateFormKeys.Year]}</p>
+            )}
+            <Form.Label htmlFor={CreateFormKeys.Year}>Published on</Form.Label>
+            <Form.Control
+              type="number"
+              id={CreateFormKeys.Year}
+              name={CreateFormKeys.Year}
+              placeholder="Enter year of publication"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values[CreateFormKeys.Year]}
+            />
+          </Form.Group>
 
-        <Form.Group className="mb-3">
-          {errors[CreateFormKeys.Genre] && touched[CreateFormKeys.Genre] && (
-            <p className={styles.invalid}>{errors[CreateFormKeys.Genre]}</p>
-          )}
-          <Form.Label htmlFor={CreateFormKeys.Genre}>Genre</Form.Label>
-          <Form.Control
-            type="text"
-            id={CreateFormKeys.Genre}
-            name={CreateFormKeys.Genre}
-            placeholder="Enter genre"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values[CreateFormKeys.Genre]}
-          />
-        </Form.Group>
+          <Form.Group className="mb-3" style={{ width: "50%" }}>
+            {errors[CreateFormKeys.Genre] && touched[CreateFormKeys.Genre] && (
+              <p className={styles.invalid}>{errors[CreateFormKeys.Genre]}</p>
+            )}
+            <Form.Label htmlFor={CreateFormKeys.Genre}>Genre</Form.Label>
+            <Form.Control
+              type="text"
+              id={CreateFormKeys.Genre}
+              name={CreateFormKeys.Genre}
+              placeholder="Enter genre"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values[CreateFormKeys.Genre]}
+            />
+          </Form.Group>
+        </div>
 
         <Form.Group className="mb-3">
           {errors[CreateFormKeys.Description] &&
@@ -167,7 +170,12 @@ export default function CreateBook() {
           />
         </Form.Group>
 
-        <button className={styles.submitButton} variant="primary" type="submit" value="Create Post">
+        <button
+          className={styles.submitButton}
+          variant="primary"
+          type="submit"
+          value="Create Post"
+        >
           Create
         </button>
       </Form>
