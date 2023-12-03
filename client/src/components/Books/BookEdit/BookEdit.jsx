@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import { useFormik } from "formik";
 
-import * as bookService from "../../services/bookService";
+import * as bookService from "../../../services/bookService.js";
 import { editBookValidation } from "./editBookValidation.js";
-import styles from "../../styles/FormStyles.module.css";
-import { EditFormKeys } from "../../utils/constants.js";
-import Path from "../../paths";
+import styles from "../../../styles/FormStyles.module.css";
+import { EditFormKeys } from "../../../utils/constants.js";
+import Path from "../../../paths.js";
 
 export default function bookEdit() {
   const navigate = useNavigate();

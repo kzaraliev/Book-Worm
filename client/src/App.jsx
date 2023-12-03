@@ -13,7 +13,7 @@ import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
 import CreateBook from "./components/CreateBook/CreateBook.jsx";
 import Profile from "./components/Profile/Profile.jsx";
-import EditBook from "./components/BookEdit/BookEdit.jsx";
+import EditBook from "./components/Books/BookEdit/BookEdit.jsx";
 
 function App() {
   return (
