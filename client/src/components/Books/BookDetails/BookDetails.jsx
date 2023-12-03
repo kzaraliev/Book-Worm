@@ -7,7 +7,7 @@ import * as bookService from "../../../services/bookService";
 import * as commentService from "../../../services/commentService";
 import Path from "../../../paths";
 import useForm from "../../../hooks/useForm";
-import formDate from "../../../utils/dataUtils";
+import formDate from "../../../utils/dateUtils";
 import reducer from "./commentReducer";
 import AuthContext from "../../../context/authContext";
 
