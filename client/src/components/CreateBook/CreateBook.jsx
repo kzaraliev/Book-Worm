@@ -29,8 +29,6 @@ export default function CreateBook() {
     handleChange,
     handleSubmit,
     handleBlur,
-    isSubmitting,
-    setFieldValue,
     touched,
     resetForm,
   } = useFormik({
@@ -55,7 +53,6 @@ export default function CreateBook() {
     }
   }
 
-  //TODO Add styles for overflowing form (Create book)
   return (
     <div className={styles.containerForm}>
       <Form onSubmit={handleSubmit} className={styles.form}>

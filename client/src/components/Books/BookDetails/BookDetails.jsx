@@ -1,5 +1,6 @@
 import { useContext, useEffect, useReducer, useState, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import styles from "./BookDetails.module.css";
 import * as bookService from "../../../services/bookService";
@@ -11,6 +12,7 @@ import reducer from "./commentReducer";
 import AuthContext from "../../../context/authContext";
 
 import Figure from "react-bootstrap/Figure";
+import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 
 export default function BooksDetails({}) {
@@ -82,7 +84,7 @@ export default function BooksDetails({}) {
             <p>
               <b>Genre</b>: {book.genre}
             </p>
-            <p>
+            <p className={styles.description}>
               <b>Description</b>: {book.description}
             </p>
           </div>
@@ -125,6 +127,9 @@ export default function BooksDetails({}) {
               </button>
             </form>
           </div>
+          <Nav.Link as={Link} to={`/books/${id}/edit`}>
+            Edit
+          </Nav.Link>
         </div>
       </div>
     </div>

@@ -19,3 +19,12 @@ export const CreateFormKeys = {
   Description: "description",
   ImageUrl: "imageUrl",
 };
+
+export const EditFormKeys = {
+  Title: "title",
+  Author: "author",
+  Year: "year",
+  Genre: "genre",
+  Description: "description",
+  ImageUrl: "imageUrl",
+};

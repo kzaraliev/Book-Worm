@@ -5,7 +5,8 @@ const Path = {
   Login: "/login",
   Register: "/register",
   CreateBook: "/books/create",
-  Profile: "/profile"
+  Profile: "/profile",
+  EditBook: "/books/:bookId/edit",
 };
 
 export default Path;

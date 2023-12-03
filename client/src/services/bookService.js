@@ -14,8 +14,25 @@ export const getOne = async (bookId) => {
   return result;
 };
 
-export const create = async (gameData) => {
-  const result = await request.post(baseUrl, gameData);
+export const getLatest = async () => {
+  const query = new URLSearchParams({
+      offset: 0,
+      pageSize: 3,
+  });
+
+  const result = await request.get(`${baseUrl}?${query}`);
+
+  return result;
+}
+
+export const create = async (bookData) => {
+  const result = await request.post(baseUrl, bookData);
+
+  return result;
+};
+
+export const edit = async (bookId, bookData) => {
+  const result = await request.put(`${baseUrl}/${bookId}`, bookData);
 
   return result;
 };
