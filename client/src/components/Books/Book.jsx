@@ -1,6 +1,6 @@
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import { FaBookOpen } from "react-icons/fa";
 
 import styles from "./Books.module.css";
 
@@ -16,9 +16,10 @@ export default function Book({ id, title, author, imageUrl }) {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{author}</Card.Text>
-          <Button as={Link} to={`/books/${id}`} variant="primary">
+          <Link to={`/books/${id}`} className={styles.button}>
             Details
-          </Button>
+            <FaBookOpen className={styles.icon} />
+          </Link>
         </Card.Body>
       </Card>
     </>

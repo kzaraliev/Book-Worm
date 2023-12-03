@@ -19,6 +19,10 @@ export default function Profile() {
         console.log(err);
       });
   }, [user.userId]);
+  
+  //Add styling for the page
+  //If the user don't have books scenario
+  //Overflowing books container
 
   return (
     <div className={styles.container}>

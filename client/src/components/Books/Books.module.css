@@ -25,3 +25,22 @@
   flex-direction: column;
   align-items: center;
 }
+
+.button {
+  padding: 12px 0 12px;
+  width: 30%;
+  color: rgba(0, 0, 0, 0.795);
+  font-weight: 600;
+  font-size: large;
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+}
+
+.icon{
+  margin-bottom: 2.2px;
+  margin-left: 6px;
+}
