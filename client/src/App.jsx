@@ -7,9 +7,9 @@ import Footer from "./components/Footer/Footer.jsx";
 import Navigation from "./components/Navigation/Navigation.jsx";
 import Home from "./components/Home/Home.jsx";
 import Books from "./components/Books/BooksList.jsx";
-import BookDetails from "./components/Books/BookDetails/BookDetails.jsx";
-import CreateBook from "./components/CreateBook/CreateBook.jsx";
-import EditBook from "./components/Books/BookEdit/BookEdit.jsx";
+import BookDetails from "./components/BookDetails/BookDetails.jsx";
+import CreateBook from "./components/BookCreate/BookCreate.jsx";
+import EditBook from "./components/BookEdit/BookEdit.jsx";
 import About from "./components/About/About.jsx";
 import AuthGuard from "./guards/AuthGuard";
 import LoggedInGuard from "./guards/LoggedInGuard";
@@ -33,7 +33,7 @@ function App() {
             <Route path={Path.Register} element={<Register />} />
             <Route path={Path.Login} element={<Login />} />
           </Route>
-          
+
           <Route element={<AuthGuard />}>
             <Route path={Path.Logout} element={<Logout />} />
             <Route path={Path.CreateBook} element={<CreateBook />} />

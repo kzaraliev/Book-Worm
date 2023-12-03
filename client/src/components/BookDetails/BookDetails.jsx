@@ -1,15 +1,14 @@
 import { useContext, useEffect, useReducer, useState, useMemo } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 
 import styles from "./BookDetails.module.css";
-import * as bookService from "../../../services/bookService";
-import * as commentService from "../../../services/commentService";
-import Path from "../../../paths";
-import useForm from "../../../hooks/useForm";
-import formDate from "../../../utils/dateUtils";
+import * as bookService from "../../services/bookService";
+import * as commentService from "../../services/commentService";
+import Path from "../../paths";
+import useForm from "../../hooks/useForm";
+import formDate from "../../utils/dateUtils";
 import reducer from "./commentReducer";
-import AuthContext from "../../../context/authContext";
+import AuthContext from "../../context/authContext";
 
 import Figure from "react-bootstrap/Figure";
 import Nav from "react-bootstrap/Nav";
