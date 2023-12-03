@@ -14,6 +14,16 @@ export const getOne = async (bookId) => {
   return result;
 };
 
+export const getUserBooks = async (userId) => {
+  const query = new URLSearchParams({
+    where: `_ownerId="${userId}"`,
+  });
+  
+  const result = await request.get(`${baseUrl}?${query}`);
+
+  return result;
+};
+
 export const getLatest = async () => {
   const query = new URLSearchParams({
     offset: 0,

@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
     const result = await authService.register(
       values.email,
       values.password,
-      values.imgURL,
+      values.img,
       values.username
     );
 

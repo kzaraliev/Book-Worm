@@ -3,6 +3,7 @@ const Path = {
   Books: "/books",
   About: "/about",
   Login: "/login",
+  Logout: "/logout",
   Register: "/register",
   CreateBook: "/books/create",
   Profile: "/profile",

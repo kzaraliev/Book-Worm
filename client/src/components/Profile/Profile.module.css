@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 91.4vh;
+}
+
+.content {
+  padding: 32px 28px;
+  width: 70%;
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imgContainer {
+  width: 400px; /* Set the desired width for your container */
+  height: 500px; /* Set the desired height for your container */
+  overflow: hidden;
+  background-color: #e4d5b748;
+  border: 5px dashed #d9b99b;
+  border-radius: 12px;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileDetails {
+  padding: 3px 12px;
+  width: 60%;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.booksList {
+  height: 30%;
+  text-align: center;
+  list-style-type: none;
+}
+
+.books {
+  text-decoration: none;
+  color: black;
+}
+
+.books:hover {
+  text-decoration: underline;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+
+.button {
+  padding: 12px 16px;
+  background-color: #e4d5b794;
+  border: 2px solid #d9b99b;
+  border-radius: 12px;
+  color: rgba(0, 0, 0, 0.795);
+  transition-duration: 0.4s;
+  font-weight: 500;
+  font-size: 1.3rem;
+}

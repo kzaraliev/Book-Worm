@@ -14,6 +14,7 @@ import Register from "./components/Register/Register.jsx";
 import CreateBook from "./components/CreateBook/CreateBook.jsx";
 import Profile from "./components/Profile/Profile.jsx";
 import EditBook from "./components/Books/BookEdit/BookEdit.jsx";
+import Logout from "./components/Logout/Logout.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path={`${Path.Books}/:id`} element={<BookDetails />} />
           <Route path={Path.About} element={<About />} />
           <Route path={Path.Login} element={<Login />} />
+          <Route path={Path.Logout} element={<Logout/>}/>
           <Route path={Path.Register} element={<Register />} />
           <Route path={Path.CreateBook} element={<CreateBook />} />
           <Route path={Path.Profile} element={<Profile />} />
