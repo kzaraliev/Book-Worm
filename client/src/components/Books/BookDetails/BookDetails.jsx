@@ -16,7 +16,7 @@ import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 
 export default function BooksDetails({}) {
-  const { isAuthenticated, username } = useContext(AuthContext);
+  const {userId, isAuthenticated, username } = useContext(AuthContext);
   const { id } = useParams();
   const [book, setBook] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
@@ -139,12 +139,21 @@ export default function BooksDetails({}) {
               </button>
             </form>
           </div>
-          <Nav.Link as={Link} to={`/books/${id}/edit`}>
-            Edit
-          </Nav.Link>
-          <button className="button" onClick={deleteButtonClickHandler}>
-            Delete
-          </button>
+          {userId === book._ownerId && (
+            <div className={styles.editAndDeleteContainer}>
+              <button className={styles.editButton}>
+                <Nav.Link as={Link} to={`/books/${id}/edit`}>
+                  Edit
+                </Nav.Link>
+              </button>
+              <button
+                className={styles.deleteButton}
+                onClick={deleteButtonClickHandler}
+              >
+                Delete
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -156,10 +156,11 @@
   display: flex;
   width: 20%;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
-.editButton {
+.editButton,
+.deleteButton {
   padding: 6px 12px;
   background-color: #e4d5b794;
   border: 2px solid #d9b99b;
@@ -168,4 +169,10 @@
   transition-duration: 0.4s;
   font-weight: 500;
   font-size: 1.3rem;
+}
+
+.editButton:hover,
+.deleteButton:hover {
+  background-color: #e4d5b7;
+  color: rgb(0, 0, 0);
 }
