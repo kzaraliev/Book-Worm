@@ -14,7 +14,6 @@ import AuthContext from "../../../context/authContext";
 import Figure from "react-bootstrap/Figure";
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
-import { pathToUrl } from "../../../utils/pathUtils";
 
 export default function BooksDetails({}) {
   const { isAuthenticated, username } = useContext(AuthContext);
@@ -55,14 +54,16 @@ export default function BooksDetails({}) {
   };
 
   const deleteButtonClickHandler = async () => {
-    const hasConfirmed = confirm(`Are you sure you want to delete ${book.title}`);
+    const hasConfirmed = confirm(
+      `Are you sure you want to delete ${book.title}`
+    );
 
     if (hasConfirmed) {
-        await bookService.remove(id);
+      await bookService.remove(id);
 
-        navigate(Path.Books);
+      navigate(Path.Books);
     }
-}
+  };
 
   const initialValues = useMemo(
     () => ({
@@ -138,7 +139,7 @@ export default function BooksDetails({}) {
               </button>
             </form>
           </div>
-          <Nav.Link as={Link} to={pathToUrl(Path.EditBook, { id })}>
+          <Nav.Link as={Link} to={`/books/${id}/edit`}>
             Edit
           </Nav.Link>
           <button className="button" onClick={deleteButtonClickHandler}>

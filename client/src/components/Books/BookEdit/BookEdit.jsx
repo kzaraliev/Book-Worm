@@ -49,26 +49,11 @@ export default function bookEdit() {
     enableReinitialize: true,
   });
 
-  // const editBookSubmitHandler = async (e) => {
-  //   e.preventDefault();
-
-  //   const values = Object.fromEntries(new FormData(e.currentTarget));
-
-  //   try {
-  //     await bookService.edit(bookId, values);
-
-  //     navigate("/books");
-  //   } catch (err) {
-  //     // Error notification
-  //     console.log(err);
-  //   }
-  // };
-
   async function onSubmit() {
     try {
       await bookService.edit(bookId, values);
 
-      navigate(Path.Books);
+      navigate(`${Path.Books}/${bookId}`);
     } catch (error) {
       navigate(Path.Books);
     }
