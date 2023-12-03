@@ -16,14 +16,14 @@ export const getOne = async (bookId) => {
 
 export const getLatest = async () => {
   const query = new URLSearchParams({
-      offset: 0,
-      pageSize: 3,
+    offset: 0,
+    pageSize: 3,
   });
 
   const result = await request.get(`${baseUrl}?${query}`);
 
   return result;
-}
+};
 
 export const create = async (bookData) => {
   const result = await request.post(baseUrl, bookData);
@@ -36,3 +36,5 @@ export const edit = async (bookId, bookData) => {
 
   return result;
 };
+
+export const remove = async (bookId) => request.remove(`${baseUrl}/${bookId}`);
