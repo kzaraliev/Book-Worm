@@ -16,7 +16,7 @@ import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 
 export default function BooksDetails({}) {
-  const { email, userId, isAuthenticated, username } = useContext(AuthContext);
+  const { isAuthenticated, username } = useContext(AuthContext);
   const { id } = useParams();
   const [book, setBook] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
