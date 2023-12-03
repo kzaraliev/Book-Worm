@@ -20,7 +20,7 @@ const initialValues = {
   [CreateFormKeys.ImageUrl]: "",
 };
 
-export default function CreateBook() {
+export default function BookCreate() {
   const navigate = useNavigate();
   const { logoutHandler } = useContext(AuthContext);
 

@@ -9,7 +9,7 @@ import styles from "../../styles/FormStyles.module.css";
 import { EditFormKeys } from "../../utils/constants.js";
 import Path from "../../paths.js";
 
-export default function bookEdit() {
+export default function BookEdit() {
   const navigate = useNavigate();
   const { bookId } = useParams();
   const [book, setBook] = useState({
