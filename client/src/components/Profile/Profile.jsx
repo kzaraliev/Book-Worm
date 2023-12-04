@@ -19,7 +19,7 @@ export default function Profile() {
         console.log(err);
       });
   }, [user.userId]);
-  
+
   //Add styling for the page
   //If the user don't have books scenario
   //Overflowing books container
@@ -38,23 +38,32 @@ export default function Profile() {
             your bookish personality shine. Bookworm is your stage — enjoy the
             spotlight, {user.username}! Happy reading and reviewing! 📖
           </p>
-          <ul className={styles.booksList}>
-            <h1>{user.username}'s books:</h1>
-            {userBooks.map((book) => (
-              <li key={book._id}>
-                <Link className={styles.books} to={`${Path.Books}/${book._id}`}>
-                  "{book.title}" - {book.author}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {userBooks.length === 0 ? (
+            <h1>
+              You haven't published a book yet?{" "}
+              <Link className={styles.linkStyle} to={Path.CreateBook}>
+                Share your favorite ones
+              </Link>
+            </h1>
+          ) : (
+            <ul className={styles.booksList}>
+              <h1>{user.username}'s books:</h1>
+              {userBooks.map((book) => (
+                <li key={book._id}>
+                  <Link
+                    className={styles.books}
+                    to={`${Path.Books}/${book._id}`}
+                  >
+                    "{book.title}" - {book.author}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
           <div className={styles.buttonsContainer}>
-            <button className={styles.button}>
-              <Link>Edit Profile</Link>
-            </button>
-            <button className={styles.button}>
-              <Link to={Path.Logout}>Logout</Link>
-            </button>
+            <Link to={Path.Logout}>
+              <button className={styles.button}>Logout</button>
+            </Link>
           </div>
         </div>
       </div>
