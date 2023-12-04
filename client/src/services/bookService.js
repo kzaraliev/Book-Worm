@@ -18,19 +18,15 @@ export const getUserBooks = async (userId) => {
   const query = new URLSearchParams({
     where: `_ownerId="${userId}"`,
   });
-  
-  const result = await request.get(`${baseUrl}?${query}`);
 
+  const result = await request.get(`${baseUrl}?${query}`);
   return result;
 };
 
 export const getLatest = async () => {
-  const query = new URLSearchParams({
-    offset: 0,
-    pageSize: 3,
-  });
+  //const query = encodeURIComponent(`offset=0&pageSize=3`); - not working correctly
 
-  const result = await request.get(`${baseUrl}?${query}`);
+  const result = await request.get(`${baseUrl}?sortBy=_createdOn%20desc&offset=0&pageSize=3`);
 
   return result;
 };

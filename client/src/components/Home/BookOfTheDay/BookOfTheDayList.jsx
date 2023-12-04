@@ -7,8 +7,7 @@ export default function BookOfTheDayList() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    bookService.getAll().then((result) => {
-      result = result.sort((a, b) => b._createdOn - a._createdOn).slice(0, 3);
+    bookService.getLatest().then((result) => {
       setBooks(result);
     });
   }, []);
