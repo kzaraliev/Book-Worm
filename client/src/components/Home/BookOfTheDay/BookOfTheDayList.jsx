@@ -12,9 +12,14 @@ export default function BookOfTheDayList() {
     });
   }, []);
 
+  console.log(books.length);
+
   return (
     <div className={styles.mostPopularBooks}>
-      <h1 className={styles.title}>Recently added books:</h1>
+      {books.length !== 0 && (
+        <h1 className={styles.title}>Recently added books:</h1>
+      )}
+
       <div className={styles.containerBooks}>
         {books.map((book) => (
           <BookOfTheDay key={book._id} {...book} />

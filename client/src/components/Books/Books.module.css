@@ -44,3 +44,25 @@
   margin-bottom: 2.2px;
   margin-left: 6px;
 }
+
+.empty{
+  height: 91.4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyText{
+  font-size: xx-large;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+  font-size: x-large;
+}
+
+.link:hover{
+  text-decoration: underline;
+}
