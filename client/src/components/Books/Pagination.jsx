@@ -9,7 +9,7 @@ export default function Pagination({ booksPerPage, totalBooks, paginate }) {
 
   return (
     <nav>
-      <ul className="pagination" style={{marginTop: "12px", marginBottom: "24px"}}>
+      <ul className="pagination" style={{marginTop: "12px", marginBottom: "32px"}}>
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">
             <a onClick={() => paginate(number)} className={styles.pageLink}>

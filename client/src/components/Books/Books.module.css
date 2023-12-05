@@ -1,7 +1,7 @@
 .grid {
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 17px;
+  margin-bottom: 9px;
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -101,4 +101,10 @@
 .dropdown{
   align-self: flex-end;
   margin-bottom: 0;
+}
+
+.dropdownButton{
+  background-color: #eed9c4 !important;
+  border: 2px solid #d9b99b !important;
+  color: black !important;
 }

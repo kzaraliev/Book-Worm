@@ -71,7 +71,7 @@ export default function Books() {
           <div className={styles.header}>
             <h1 className={styles.title}>All books:</h1>
             <Dropdown className={styles.dropdown} onSelect={selectOrderHandler}>
-              <Dropdown.Toggle id="dropdown-basic">
+              <Dropdown.Toggle className={styles.dropdownButton}>
                 {sortText !== "" ? `Order by: ${sortText}` : "Order by"}
               </Dropdown.Toggle>
 
