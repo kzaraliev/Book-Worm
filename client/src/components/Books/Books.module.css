@@ -1,6 +1,7 @@
 .grid {
   max-width: 1200px;
-  margin: 48px 0 auto;
+  margin: 0 auto;
+  margin-bottom: 17px;
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -77,6 +78,27 @@
   background-color: #eed9c4;
   border: 1px solid #d9b99b;
 }
+
 .pageLink:hover {
   cursor: pointer;
+}
+
+
+.header{
+  margin: 24px 12px auto;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-family: "Agbalumo", cursive;
+  margin-bottom: 24px;
+}
+
+.dropdown{
+  align-self: flex-end;
+  margin-bottom: 0;
 }
