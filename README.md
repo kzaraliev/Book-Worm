@@ -206,10 +206,10 @@ Book Worm is a web application for book reviews and comments.
 -   **`/client`**: Contains the SPA.
     -   `/src`: React components, style css, and business logic, contexts, guards and requester services.
 		-	`/components`: React components, style css, and business logic.
-    		-  	`/contexts`: React AuthContext and OwnerContext components that share authentication and authorization states between components.
-    		-	`/guards`: React AuthGuard and LoggedInGuard components that check the authentication and authorization of the current user.
-      		-	`/hooks`: Custom React hooks.
-          	-	`/utils`: Houses reusable functions, constants.
+    	-  	`/contexts`: React AuthContext and OwnerContext components that share authentication and authorization states between components.
+    	-	`/guards`: React AuthGuard and LoggedInGuard components that check the authentication and authorization of the current user.
+   		-	`/hooks`: Custom React hooks.
+    	-	`/utils`: Houses reusable functions, constants.
 		-	`/services`: JS logic with requester functions for the REST API Service.
       
 -   **`/server`**: Contains REST API Service with data folder. In this folder are stored .json files with premade data.
