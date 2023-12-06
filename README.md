@@ -2,7 +2,217 @@
 
 Book Worm is a web application for book reviews and comments.
 
-## Getting Started
+## Features
+
+ -	Book Reviews: Share your thoughts and reviews on various books.
+ -	Comments: Engage in discussions through comments on book reviews.
+ -	User-Friendly Interface: Intuitive design for easy navigation.
+
+## Application development description
+
+1. Developed with Visual Studio Code v.1.76.2 + Node.js v.16.14.2.
+2. Used libs: React.js v.18.2.0 + Vite v.4.4.5 with HMR, Babel plugin for fast refresh and some ESLint v.8.45.0 rules.
+3. Browsers used: Google Chrome(latest versions)+ Addons: React Dev.Tools, JSON Formatter.
+
+## Usage
+
+1. **Navigation bar:**
+   Navigation links change the current page (view). Guests (unauthenticated visitors) see the links to the Home, Books, About, as well as the links to the Login and Register pages.
+   The logged-in user navbar contains the links to Home, Books, About, Create Book, Profile pages.
+   
+2. **Login User:**
+    The Login page is available only for guests (unauthenticated visitors).
+
+    The included REST service comes with the following premade user accounts, which you may use for test purposes:
+    ```json
+	{ "email": "peter@abv.bg", "username": "Peter", "password": "123456" }
+	{ "email": "george@abv.bg", "username": "George", "password": "123456" }
+	{ "email": "admin@abv.bg", "username": "Admin", "password": "123456" }
+    	{ "email": "elena@gmail.com", "username": "Elena", "password": "123456" }
+    ```
+	
+	**REST Service API Endpoint:**
+	-   _Method: POST_
+	-   _Request body:_
+    ```json
+    { 
+        "email": "string",
+        "password": "string"
+    }
+    ```
+	-   _URL: http://localhost:3030/users/login_
+
+	The Login page contains a form for existing user authentication. By providing an email and password, the app login user in the system if there are no empty fields.
+	Upon success, the REST service returns information about the existing user along with a property accessToken, which contains the session token for the user, in order to be able to perform authenticated requests.
+	After successful login, the user is redirected to the Home page. If there is an error, an appropriate error message is displayed.
+
+3.	**Register User:**
+    The Register page is available only for guests (unauthenticated visitors).
+
+	**REST Service API Endpoint:**
+	-   _Method: POST_
+	-   _Request body:_
+    ```json
+        { 
+            "email": "string",
+            "username": "string",
+            "password": "string",
+    	    "imgURL": "string"
+        }
+    ```
+	-   _URL: http://localhost:3030/users/register_
+
+	The Register page contains a form for new user registration. By providing an email, username, image URL and password, the app register new user in the system if there are no empty fields.
+	Upon success the REST service returns the newly created object with an automatically generated _id and a property accessToken, which contains the session token for the user, in order to be able to perform authenticated requests.
+	After successful registration, the user is redirected to the Home page. If there is an error, an appropriate error message is displayed.
+
+4.	**Logout User:**
+	The logout action is available only for logged-in users.
+	
+    **REST Service API Endpoint:**
+	-   _Method: GET_ 
+	-   _Request headers:_
+    ```json
+        { 
+            "X-Authorization": "accessToken" 
+        }
+    ```
+	-   _URL: http://localhost:3030/users/logout_
+
+	After successful logout, the user is redirected to the Login page.
+
+5.	**Home page:**
+	All users are welcomed to the Home page, where they can see recently added books and proceed to the catalogue with all other books.
+
+6.	**Books Catalog page:**
+	This page displays a list of all published books on the site. Clicking on the [Details] button in the cards leads to the details page for the selected book.
+	If the Catalog is empty, "No books yet :(" is displayed along with a "*Add your favorites" link that redirects the user to the Create Book page.
+
+	**REST Service API Endpoints:**
+	-   _Method: GET_ 
+	-   _URL: http://localhost:3030/data/books - for all books_
+
+7.	**Create book page:**
+	The Create book page is available to logged-in users. It contains a form for creating new books. User can publish books with send request, if there are no empty fields.
+	
+	**REST Service API Endpoint:**
+	-   _Method: POST_
+	-   _Request headers:_
+	```json
+		{
+			"X-Authorization": "accessToken",
+			"Content-Type": "application/json"
+		}
+    ```
+	-   _Request body:_
+	```json	
+		{ 
+			"title": "string",
+			"author": "string",
+			"year": "integer number",
+			"genre": "string",
+			"year": "integer number",
+			"description": "string",
+			"imageUrl": "string (URL address)"
+		}	
+    ```
+	-   _URL: http://localhost:3030/data/books_
+	
+	Upon success, the REST service returns the newly created item.
+	After successful creation, the user is redirected to the Books catalog page.
+
+8.	**Details page:**
+	All users are able to view details about books. Clicking on the [Details] button in the cards leads to the details page for the selected book. If the currently logged-in user is the creator of the listing, the [Edit] and [Delete] buttons are displayed.
+	Every logged-in user is able to write a comment about the book they have opened. By clicking on the [Send] button. [Send] button is disabled for users who are not logged-in.
+	
+    **REST Service API Endpoints for Details view:**
+	-   _Method: GET_
+	-   _URL: http://localhost:3030/data/books/{:bookId} - for selected book_
+	-   _URL: http://localhost:3030/data/comments?where=bookId%3D%22${:bookId}%22&load=owner_ownerId:users - to find all comments about this book_
+	
+	**REST Service API Endpoint for Commenting action:**
+	-   _Method: POST_
+	-   _Request headers:_
+    ```json
+        {
+            "X-Authorization": "accessToken",
+            "Content-Type": "application/json"
+        }
+    ```
+	-   _URL: http://localhost:3030/data/comments  - to add a comment to the book_
+
+	After successful commenting the comment is displayed in the comments section.
+
+9. 	**Edit Listing**
+    	The Edit page is available only to logged-in user who is at the same time and author of the post about the book. Clicking on the [Edit] button of a particular book on the Details page, redirects user to the Edit page with all fields filled with the data for 	the book. It contains a form with input fields for all relevant properties. The Author of the post is able to update it by sending the correct filled form with no empty fields in it before the request making.
+
+    **REST Service API Endpoint:**
+	-   _Method: PUT_
+	-   _Request headers:_
+	```json
+		{
+			"X-Authorization": "accessToken",
+			"Content-Type": "application/json"
+		}
+    ```
+	-   _Request body:_
+	```json	
+		{ 
+			"title": "string",
+			"author": "string",
+			"year": "integer number",
+			"genre": "string",
+			"description": "integer number",
+			"imageUrl": "string (URL address)"
+		}	
+    ```
+	-   _URL: http://localhost:3030/data/books/{:bookId}_
+
+    Upon success, the REST service returns the modified item.
+    After successful edit request, the user is redirected to the Details page of the currently edited item.
+
+11. **Delete Listing**
+    The delete action is available to logged-in user, who is at the same time and author of the post about the book. When the author clicks on the [Delete] button of a particular book on the Details page, a confirmation dialog is displayed, and upon confirming the dialog, the book is deleted from the system.
+
+    **REST Service API Endpoint:**
+	-   _Method: DELETE_
+	-   _Request headers:_
+    ```json
+        {
+            "X-Authorization": "accessToken",
+            "Content-Type": "application/json"
+        }
+    ```
+	-   _URL: http://localhost:3030/data/books/${:bookId}_
+    Upon success, the REST service returns Object, containing the time of deletion of selected item.
+    After successful delete request, the user is redirected to the Books page.
+
+12.	**Profile page:**
+	The Profile page is available only to logged-in users.
+	This page displays a list of all all posts with books made by the current user. If there are no published ads yet, "You haven't published a book yet?" is displayed along with a "*Share your favorite ones" link that redirects the user to the Create Book page.
+
+	**REST Service API Endpoint:**
+	-   _Method: GET_
+	-   _Request headers:_
+	```json
+		{
+			"X-Authorization": "accessToken"
+		}
+    ```	
+	-   _URL: http://localhost:3030/data/books?where=_ownerId%3D%22{:userId}%22_
+
+## Project Structure
+
+-   **`/client`**: Contains the SPA.
+    -   `/src`: React components, style css, and business logic, contexts, guards and requester services.
+		-	`/components`: React components, style css, and business logic.
+    		-  	`/contexts`: React AuthContext and OwnerContext components that share authentication and authorization states between components.
+    		-	`/guards`: React AuthGuard and LoggedInGuard components that check the authentication and authorization of the current user.
+      		-	`/hooks`: Custom React hooks.
+          	-	`/utils`: Houses reusable functions, constants.
+		-	`/services`: JS logic with requester functions for the REST API Service.
+      
+-   **`/server`**: Contains REST API Service with data folder. In this folder are stored .json files with premade data.
 
 ## How to run it?
 
