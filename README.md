@@ -261,3 +261,7 @@ Book Worm is a web application for book reviews and comments.
 		```
 	This will start the development server, and you should see output indicating that the development server is running. It should be accessible at http://localhost:5173.
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit/) file for details.
+
