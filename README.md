@@ -28,7 +28,7 @@ Book Worm is a web application for book reviews and comments.
 	{ "email": "peter@abv.bg", "username": "Peter", "password": "123456" }
 	{ "email": "george@abv.bg", "username": "George", "password": "123456" }
 	{ "email": "admin@abv.bg", "username": "Admin", "password": "123456" }
-        { "email": "elena@gmail.com", "username": "Elena", "password": "123456" }
+    { "email": "elena@gmail.com", "username": "Elena", "password": "123456" }
     ```
 	
 	**REST Service API Endpoint:**
