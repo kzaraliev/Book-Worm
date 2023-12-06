@@ -99,13 +99,13 @@ Where Words Take Flight and Imagination Finds a Home 📚📖
 	This page displays a list of all published books on the site. Clicking on the [Details] button in the cards leads to the details page for the selected book.
 	If the Catalog is empty, "No books yet :(" is displayed along with a "*Add your favorites" link that redirects the user to the Create Book page.
 
-<p align="center">
-	<img src="https://i.ibb.co/MkCJMgf/Annotation-2023-12-06-223044.png">
-</p>
+	<p align="center">
+		<img src="https://i.ibb.co/MkCJMgf/Annotation-2023-12-06-223044.png">
+	</p>
 
-**REST Service API Endpoints:**
--   _Method: GET_ 
--   _URL: http://localhost:3030/data/books - for all books_
+	**REST Service API Endpoints:**
+	-   _Method: GET_ 
+	-   _URL: http://localhost:3030/data/books - for all books_
 
 7.	**Create book page:**
 	The Create book page is available to logged-in users. It contains a form for creating new books. User can publish books with send request, if there are no empty fields.
@@ -140,27 +140,27 @@ Where Words Take Flight and Imagination Finds a Home 📚📖
 	All users are able to view details about books. Clicking on the [Details] button in the cards leads to the details page for the selected book. If the currently logged-in user is the creator of the listing, the [Edit] and [Delete] buttons are displayed.
 	Every logged-in user is able to write a comment about the book they have opened. By clicking on the [Send] button. [Send] button is disabled for users who are not logged-in.
 
-<p align="center">
-	<img src="https://i.ibb.co/0KbFfyW/Annotation-2023-12-06-223138.png">
-</p>
+	<p align="center">
+		<img src="https://i.ibb.co/0KbFfyW/Annotation-2023-12-06-223138.png">
+	</p>
 
-**REST Service API Endpoints for Details view:**
--   _Method: GET_
--   _URL: http://localhost:3030/data/books/{:bookId} - for selected book_
--   _URL: http://localhost:3030/data/comments?where=bookId%3D%22${:bookId}%22&load=owner_ownerId:users - to find all comments about this book_
+	**REST Service API Endpoints for Details view:**
+	-   _Method: GET_
+	-   _URL: http://localhost:3030/data/books/{:bookId} - for selected book_
+	-   _URL: http://localhost:3030/data/comments?where=bookId%3D%22${:bookId}%22&load=owner_ownerId:users - to find all comments about this book_
 	
-**REST Service API Endpoint for Commenting action:**
--   _Method: POST_
--   _Request headers:_
-   ```json
-   {
-      "X-Authorization": "accessToken",
-      "Content-Type": "application/json"
-   }
-   ```
--   _URL: http://localhost:3030/data/comments  - to add a comment to the book_
+	**REST Service API Endpoint for Commenting action:**
+	-   _Method: POST_
+	-   _Request headers:_
+	   ```json
+	   {
+	      "X-Authorization": "accessToken",
+	      "Content-Type": "application/json"
+	   }
+	   ```
+	-   _URL: http://localhost:3030/data/comments  - to add a comment to the book_
 
-After successful commenting the comment is displayed in the comments section.
+	After successful commenting the comment is displayed in the comments section.
 
 9. 	**Edit Listing**
     	The Edit page is available only to logged-in user who is at the same time and author of the post about the book. Clicking on the [Edit] button of a particular book on the Details page, redirects user to the Edit page with all fields filled with the data for 	the book. It contains a form with input fields for all relevant properties. The Author of the post is able to update it by sending the correct filled form with no empty fields in it before the request making.
