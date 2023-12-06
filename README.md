@@ -8,4 +8,5 @@ To run the project locally, follow these steps:
 1. Navigate to the server directory:
    ```bash
    cd server
+   ```powershell
    node server.js
