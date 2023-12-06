@@ -1,6 +1,12 @@
 # Book Worm
 
-Book Worm is a web application for book reviews and comments.
+<h2 align="center">
+Where Words Take Flight and Imagination Finds a Home 📚📖
+</h2>
+
+<p align="center">
+	<img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7766/bookworm-clipart-xl.png" width="300px" height="300px">
+</p>
 
 ## Features
 
