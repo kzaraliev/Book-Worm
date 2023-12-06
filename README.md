@@ -36,8 +36,8 @@ Book Worm is a web application for book reviews and comments.
 	-   _Request body:_
     ```json
     { 
-        "email": "string",
-        "password": "string"
+       "email": "string",
+       "password": "string"
     }
     ```
 	-   _URL: http://localhost:3030/users/login_
@@ -53,12 +53,12 @@ Book Worm is a web application for book reviews and comments.
 	-   _Method: POST_
 	-   _Request body:_
     ```json
-        { 
-            "email": "string",
-            "username": "string",
-            "password": "string",
-    	    "imgURL": "string"
-        }
+    { 
+       "email": "string",
+       "username": "string",
+       "password": "string",
+       "imgURL": "string"
+    }
     ```
 	-   _URL: http://localhost:3030/users/register_
 
@@ -73,9 +73,9 @@ Book Worm is a web application for book reviews and comments.
 	-   _Method: GET_ 
 	-   _Request headers:_
     ```json
-        { 
-            "X-Authorization": "accessToken" 
-        }
+    { 
+       "X-Authorization": "accessToken" 
+    }
     ```
 	-   _URL: http://localhost:3030/users/logout_
 
@@ -99,22 +99,22 @@ Book Worm is a web application for book reviews and comments.
 	-   _Method: POST_
 	-   _Request headers:_
 	```json
-		{
-			"X-Authorization": "accessToken",
-			"Content-Type": "application/json"
-		}
+	{
+	   "X-Authorization": "accessToken",
+	   "Content-Type": "application/json"
+	}
     ```
 	-   _Request body:_
 	```json	
-		{ 
-			"title": "string",
-			"author": "string",
-			"year": "integer number",
-			"genre": "string",
-			"year": "integer number",
-			"description": "string",
-			"imageUrl": "string (URL address)"
-		}	
+	{ 
+	   "title": "string",
+	   "author": "string",
+	   "year": "integer number",
+	   "genre": "string",
+	   "year": "integer number",
+	   "description": "string",
+	   "imageUrl": "string (URL address)"
+	}	
     ```
 	-   _URL: http://localhost:3030/data/books_
 	
@@ -134,10 +134,10 @@ Book Worm is a web application for book reviews and comments.
 	-   _Method: POST_
 	-   _Request headers:_
     ```json
-        {
-            "X-Authorization": "accessToken",
-            "Content-Type": "application/json"
-        }
+    {
+       "X-Authorization": "accessToken",
+       "Content-Type": "application/json"
+    }
     ```
 	-   _URL: http://localhost:3030/data/comments  - to add a comment to the book_
 
@@ -150,21 +150,21 @@ Book Worm is a web application for book reviews and comments.
 	-   _Method: PUT_
 	-   _Request headers:_
 	```json
-		{
-			"X-Authorization": "accessToken",
-			"Content-Type": "application/json"
-		}
+	{
+	   "X-Authorization": "accessToken",
+	   "Content-Type": "application/json"
+	}
     ```
 	-   _Request body:_
 	```json	
-		{ 
-			"title": "string",
-			"author": "string",
-			"year": "integer number",
-			"genre": "string",
-			"description": "integer number",
-			"imageUrl": "string (URL address)"
-		}	
+	{ 
+	   "title": "string",
+	   "author": "string",
+	   "year": "integer number",
+	   "genre": "string",
+	   "description": "integer number",
+	   "imageUrl": "string (URL address)"
+	}	
     ```
 	-   _URL: http://localhost:3030/data/books/{:bookId}_
 
@@ -178,10 +178,10 @@ Book Worm is a web application for book reviews and comments.
 	-   _Method: DELETE_
 	-   _Request headers:_
     ```json
-        {
-            "X-Authorization": "accessToken",
-            "Content-Type": "application/json"
-        }
+    {
+       "X-Authorization": "accessToken",
+       "Content-Type": "application/json"
+    }
     ```
 	-   _URL: http://localhost:3030/data/books/${:bookId}_
     Upon success, the REST service returns Object, containing the time of deletion of selected item.
@@ -195,9 +195,9 @@ Book Worm is a web application for book reviews and comments.
 	-   _Method: GET_
 	-   _Request headers:_
 	```json
-		{
-			"X-Authorization": "accessToken"
-		}
+	{
+	   "X-Authorization": "accessToken"
+	}
     ```	
 	-   _URL: http://localhost:3030/data/books?where=_ownerId%3D%22{:userId}%22_
 
