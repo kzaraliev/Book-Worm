@@ -1410,6 +1410,16 @@
                   "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                   "_createdOn": 1699692647000
                 },
+                "3c7db5b2-563d-4e74-bce0-888657ac9109": {
+                    "title": "Babel",
+                    "author": "R. F. Kuang",
+                    "year": 2022,
+                    "genre": "Fantasy",
+                    "description": "Robin Swift, orphaned by cholera in Canton, is brought to London by the mysterious Professor Lovell. There, he trains for years in Latin, Ancient Greek, and Chinese, all in preparation for the day he’ll enroll in Oxford University’s prestigious Royal Institute of Translation—also known as Babel. The tower and its students are the world's center for translation and, more importantly, magic. Silver-working—the art of manifesting the meaning lost in translation using enchanted silver bars—has made the British unparalleled in power, as the arcane craft serves the Empire's quest for colonization.",
+                    "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1677361825i/57945316.jpg",
+                    "_ownerId": "5597a429-f87f-48d4-83b0-268f45ef5a68",
+                    "_createdOn": 1701009960321
+                  },
                 "f5223eef-c7eb-4430-a3cb-e2ad60ff8f21": {
                   "title": "The Catcher in the Rye",
                   "author": "J.D. Salinger",
@@ -1479,7 +1489,17 @@
                   "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660273739i/11870085.jpg",
                   "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
                   "_createdOn": 1700311847000
-                }
+                },
+                "027bcb65-0fc4-4875-ad9b-0c2c67409b11": {
+                  "title": "The Poppy War",
+                  "author": "R. F. Kuang",
+                  "year": 2018,
+                  "genre": "Grimdark",
+                  "description": "The Poppy War by R.F. Kuang is a fantasy novel that follows the journey of Rin, a young and ambitious war orphan from the Rooster Province, as she gains admission to the prestigious Sinegard military academy. Set in a world inspired by Chinese history and mythology, the story takes a dark turn as Rin discovers her shamanic powers and becomes entangled in a brutal war between the Nikara Empire and the Federation of Mugen. The novel explores themes of power, identity, and the devastating costs of war, blending history and fantasy to create a gripping and thought-provoking narrative.",
+                  "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/ca/The_Poppy_War_1st_cover.jpg",
+                  "_ownerId": "5597a429-f87f-48d4-83b0-268f45ef5a68",
+                  "_createdOn": 1701965560321
+                },
               
         },
     	comments: {
