@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
 
     localStorage.setItem("accessToken", result.accessToken);
 
-    navigate(Path.Home);
+    navigate(Path.Profile);
   };
 
   const logoutHandler = () => {
