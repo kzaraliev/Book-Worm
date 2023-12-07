@@ -162,7 +162,7 @@ Where Words Take Flight and Imagination Finds a Home 📚📖
 
 	After successful commenting the comment is displayed in the comments section.
 
-9. 	**Edit Listing**
+9. 	**Edit Book:**
     	The Edit page is available only to logged-in user who is at the same time and author of the post about the book. Clicking on the [Edit] button of a particular book on the Details page, redirects user to the Edit page with all fields filled with the data for 	the book. It contains a form with input fields for all relevant properties. The Author of the post is able to update it by sending the correct filled form with no empty fields in it before the request making.
 
     **REST Service API Endpoint:**
@@ -190,7 +190,7 @@ Where Words Take Flight and Imagination Finds a Home 📚📖
     Upon success, the REST service returns the modified item.
     After successful edit request, the user is redirected to the Details page of the currently edited item.
 
-11. **Delete Listing**
+10. **Delete Book:**
     The delete action is available to logged-in user, who is at the same time and author of the post about the book. When the author clicks on the [Delete] button of a particular book on the Details page, a confirmation dialog is displayed, and upon confirming the dialog, the book is deleted from the system.
 
     **REST Service API Endpoint:**
@@ -206,10 +206,14 @@ Where Words Take Flight and Imagination Finds a Home 📚📖
     Upon success, the REST service returns Object, containing the time of deletion of selected item.
     After successful delete request, the user is redirected to the Books page.
 
-12.	**Profile page:**
+11.	**Profile page:**
 	The Profile page is available only to logged-in users.
 	This page displays a list of all all posts with books made by the current user. If there are no published ads yet, "You haven't published a book yet?" is displayed along with a "*Share your favorite ones" link that redirects the user to the Create Book page.
 
+	<p align="center">
+		<img src="https://i.ibb.co/VVYWzR8/Annotation-2023-12-07-183708.png">
+	</p>
+ 
 	**REST Service API Endpoint:**
 	-   _Method: GET_
 	-   _Request headers:_
