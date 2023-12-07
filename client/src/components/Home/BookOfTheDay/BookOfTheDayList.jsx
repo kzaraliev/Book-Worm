@@ -12,8 +12,6 @@ export default function BookOfTheDayList() {
     });
   }, []);
 
-  console.log(books.length);
-
   return (
     <div className={styles.mostPopularBooks}>
       {books.length !== 0 && (

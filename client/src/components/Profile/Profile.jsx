@@ -31,7 +31,7 @@ export default function Profile() {
           <img className={styles.img} src={user.imgURL} />
         </div>
         <div className={styles.profileDetails}>
-          <p>
+          <p className={styles.welcomeText}>
             Hey {user.username}! Welcome to Book Worm 🐛, your cozy corner for
             all things books 📚! It's time to transform your profile into a
             literary haven. Share your reviews, swap recommendations, and let
@@ -39,29 +39,33 @@ export default function Profile() {
             spotlight, {user.username}! Happy reading and reviewing! 📖
           </p>
           {userBooks.length === 0 ? (
-            <h1>
-              You haven't published a book yet?{" "}
-              <Link className={styles.linkStyle} to={Path.CreateBook}>
-                Share your favorite ones
-              </Link>
-            </h1>
+            <div className={styles.noBooks}>
+              <h1>You haven't published a book yet? </h1>
+              <h1>
+                <Link className={styles.linkStyle} to={Path.CreateBook}>
+                  *Share your favorite ones
+                </Link>
+              </h1>
+            </div>
           ) : (
-            <ul className={styles.booksList}>
+            <div className={styles.booksContainer}>
               <h1>{user.username}'s books:</h1>
-              {userBooks.map((book) => (
-                <li key={book._id}>
-                  <Link
-                    className={styles.books}
-                    to={`${Path.Books}/${book._id}`}
-                  >
-                    "{book.title}" - {book.author}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+              <ul className={styles.booksList}>
+                {userBooks.map((book) => (
+                  <li key={book._id}>
+                    <Link
+                      className={styles.books}
+                      to={`${Path.Books}/${book._id}`}
+                    >
+                      "{book.title}" - {book.author}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
           <div className={styles.buttonsContainer}>
-            <Link to={Path.Logout}>
+            <Link to={Path.Logout} style={{ width: "40%" }}>
               <button className={styles.button}>Logout</button>
             </Link>
           </div>
