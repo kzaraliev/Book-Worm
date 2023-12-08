@@ -208,7 +208,7 @@ Where Words Take Flight and Imagination Finds a Home 📚📖
 
 11.	**Profile page:**
 	The Profile page is available only to logged-in users.
-	This page displays a list of all all posts with books made by the current user. If there are no published ads yet, "You haven't published a book yet?" is displayed along with a "*Share your favorite ones" link that redirects the user to the Create Book page.
+	This page displays a list of all all posts with books made by the current user. If there are no published books yet, "You haven't published a book yet?" is displayed along with a "*Share your favorite ones" link that redirects the user to the Create Book page.
 
 	<p align="center">
 		<img src="https://i.ibb.co/VVYWzR8/Annotation-2023-12-07-183708.png">
