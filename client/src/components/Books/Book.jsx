@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaBookOpen } from "react-icons/fa";
 
 import styles from "./Books.module.css";
+import Path from "../../paths";
 
 export default function Book({ id, title, author, imageUrl }) {
   return (
@@ -16,7 +17,7 @@ export default function Book({ id, title, author, imageUrl }) {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{author}</Card.Text>
-          <Link to={`/books/${id}`} className={styles.button}>
+          <Link to={`${Path.Books}/${id}`} className={styles.button}>
             Details
             <FaBookOpen className={styles.icon} />
           </Link>
