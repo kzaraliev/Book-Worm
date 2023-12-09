@@ -40,9 +40,9 @@ export default function BookCreate() {
 
   async function onSubmit() {
     try {
-      await bookService.create(values);
+      const { _id } = await bookService.create(values);
 
-      navigate(Path.Books);
+      navigate(`${Path.Books}/${_id}`);
     } catch (error) {
       if (error.code === 401) {
         resetForm();
