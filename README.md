@@ -249,11 +249,11 @@ Where Words Take Flight and Imagination Finds a Home 📚📖
 -	**Clone the Repository:**
 	-	Clone project repository to your local machine using a version control tool like Git. Open your terminal and run:
 	```bash
-	git clone https://github.com/kzaraliev/Space-Collector.git
+	git clone https://github.com/kzaraliev/Book-Worm.git
 	```
 	-	Navigate to the root folder of the project:
 	```bash
-	cd Space-Collector
+	cd Book-Worm
 	```
 -	**Install Client Dependencies:**
 	-	Navigate to the root directory of the project and install the dependencies for the client.
