@@ -47,7 +47,6 @@ export default function Login() {
             <p className={styles.invalid}>{serverError}</p>
           </div>
         )}
-
         <Form.Group className="mb-3">
           <Form.Label htmlFor="email">Email address</Form.Label>
           <Form.Control
@@ -60,7 +59,6 @@ export default function Login() {
             onBlur={handleBlur}
           />
         </Form.Group>
-
         <Form.Group className="mb-3">
           <div className={styles.inputContainer}>
             <Form.Label htmlFor="password">Password</Form.Label>

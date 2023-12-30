@@ -65,9 +65,6 @@ export default function BookEdit() {
         <h1 className={styles.title}>Edit Book</h1>
 
         <Form.Group className="mb-3">
-          {errors[EditFormKeys.Title] && touched[EditFormKeys.Title] && (
-            <p className={styles.invalid}>{errors[EditFormKeys.Title]}</p>
-          )}
           <Form.Label htmlFor={EditFormKeys.Title}>Book Title</Form.Label>
           <Form.Control
             type="text"
@@ -78,12 +75,12 @@ export default function BookEdit() {
             onBlur={handleBlur}
             value={values[EditFormKeys.Title]}
           />
+          {errors[EditFormKeys.Title] && touched[EditFormKeys.Title] && (
+            <p className={styles.invalid}>{errors[EditFormKeys.Title]}</p>
+          )}
         </Form.Group>
 
         <Form.Group className="mb-3">
-          {errors[EditFormKeys.Author] && touched[EditFormKeys.Author] && (
-            <p className={styles.invalid}>{errors[EditFormKeys.Author]}</p>
-          )}
           <Form.Label htmlFor={EditFormKeys.Author}>Author</Form.Label>
           <Form.Control
             type="text"
@@ -94,13 +91,13 @@ export default function BookEdit() {
             onBlur={handleBlur}
             value={values[EditFormKeys.Author]}
           />
+          {errors[EditFormKeys.Author] && touched[EditFormKeys.Author] && (
+            <p className={styles.invalid}>{errors[EditFormKeys.Author]}</p>
+          )}
         </Form.Group>
 
         <div className={styles.yearAndGenre}>
           <Form.Group className="mb-3" style={{ width: "45%" }}>
-            {errors[EditFormKeys.Year] && touched[EditFormKeys.Year] && (
-              <p className={styles.invalid}>{errors[EditFormKeys.Year]}</p>
-            )}
             <Form.Label htmlFor={EditFormKeys.Year}>Published on</Form.Label>
             <Form.Control
               type="number"
@@ -111,12 +108,12 @@ export default function BookEdit() {
               onBlur={handleBlur}
               value={values[EditFormKeys.Year]}
             />
+            {errors[EditFormKeys.Year] && touched[EditFormKeys.Year] && (
+              <p className={styles.invalid}>{errors[EditFormKeys.Year]}</p>
+            )}
           </Form.Group>
 
           <Form.Group className="mb-3" style={{ width: "50%" }}>
-            {errors[EditFormKeys.Genre] && touched[EditFormKeys.Genre] && (
-              <p className={styles.invalid}>{errors[EditFormKeys.Genre]}</p>
-            )}
             <Form.Label htmlFor={EditFormKeys.Genre}>Genre</Form.Label>
             <Form.Control
               type="text"
@@ -127,16 +124,13 @@ export default function BookEdit() {
               onBlur={handleBlur}
               value={values[EditFormKeys.Genre]}
             />
+            {errors[EditFormKeys.Genre] && touched[EditFormKeys.Genre] && (
+              <p className={styles.invalid}>{errors[EditFormKeys.Genre]}</p>
+            )}
           </Form.Group>
         </div>
 
         <Form.Group className="mb-3">
-          {errors[EditFormKeys.Description] &&
-            touched[EditFormKeys.Description] && (
-              <p className={styles.invalid}>
-                {errors[EditFormKeys.Description]}
-              </p>
-            )}
           <Form.Label htmlFor={EditFormKeys.Description}>
             Description
           </Form.Label>
@@ -152,12 +146,15 @@ export default function BookEdit() {
             onBlur={handleBlur}
             value={values[EditFormKeys.Description]}
           />
+          {errors[EditFormKeys.Description] &&
+            touched[EditFormKeys.Description] && (
+              <p className={styles.invalid}>
+                {errors[EditFormKeys.Description]}
+              </p>
+            )}
         </Form.Group>
 
         <Form.Group className="mb-3">
-          {errors[EditFormKeys.ImageUrl] && touched[EditFormKeys.ImageUrl] && (
-            <p className={styles.invalid}>{errors[EditFormKeys.ImageUrl]}</p>
-          )}
           <Form.Label htmlFor={EditFormKeys.ImageUrl}>Book image</Form.Label>
           <Form.Control
             type="text"
@@ -168,6 +165,9 @@ export default function BookEdit() {
             onBlur={handleBlur}
             value={values[EditFormKeys.ImageUrl]}
           />
+          {errors[EditFormKeys.ImageUrl] && touched[EditFormKeys.ImageUrl] && (
+            <p className={styles.invalid}>{errors[EditFormKeys.ImageUrl]}</p>
+          )}
         </Form.Group>
 
         <button
